@@ -1,0 +1,40 @@
+.main {
+    position:relative;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: auto;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    top:50px;
+   //justify-content: center;
+   //align-items: center;
+    h3 {
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 10px
+    }
+    form{
+        button{
+            width:100px
+        }
+    }
+
+}
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    width: 200px;
+    
+}
+select{
+    width:150px;
+    left:20px
+}
+.routers{
+    display: flex;
+    justify-content: space-around;
+
+}
