@@ -1,0 +1,22 @@
+<div class="main">
+    <b>
+        <h3>Log in</h3>
+    </b>
+    <!-- <form action=""> -->
+    <input matInput placeholder="User Name" [(ngModel)]="userName"> <br><br><br>
+
+    <input type="password" matInput placeholder="Password" [(ngModel)]="password"><br><br><br>
+    <select name="user" id="" [(ngModel)]="user">
+        <option value="undefined" selected disabled>Select User Type</option>
+        <option value="{{user}}" *ngFor="let user of userType">{{user}}</option>
+        <!-- <option value="Agent">Agent</option> -->
+    </select><br><br>
+    <label for="check"><input type="checkbox" id="check" style="width:25px">Remember me</label><br><br>
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+    <!-- </form> -->
+    <br><br>
+    <div class="routers">
+        <a [routerLink]="[]">Register</a>
+        <a [routerLink]="[]">Forgot Password</a>
+    </div><br><br>
+</div>
