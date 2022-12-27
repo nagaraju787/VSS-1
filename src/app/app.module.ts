@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     RouterModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
 
   ],
   providers: [],
