@@ -1,12 +1,21 @@
 .p1 {
     display: flex;
     justify-content: center;
-    border: 2px solid black;
+    //border: 2px solid black;
     width:500px;
     margin:auto;
     background: #ddd;
+    border-radius: 5px;
 }
-
+.p2{
+    background: rgb(30, 30, 231);
+}
 h1 {
     font-size: 30px;
+}
+.error{
+    color:red;
+}
+button{
+    background: rgb(30, 30, 231);
 }
