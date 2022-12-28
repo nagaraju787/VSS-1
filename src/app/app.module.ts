@@ -9,13 +9,15 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent
+    RegistrationComponent,
     LoginComponent,
+    DashboardComponent,
 ],
   imports: [
     BrowserModule,

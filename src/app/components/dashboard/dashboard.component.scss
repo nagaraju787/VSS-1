@@ -1,0 +1,15 @@
+.main-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: green;
+    div{
+       color: red; 
+       line-height:80px;
+       font-size: large;
+       font-weight: bold;
+       &:hover{
+        cursor: pointer;
+        color: white;
+       }
+    }
+}
