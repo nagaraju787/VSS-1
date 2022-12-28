@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     // }
     this.RegDetails.forEach((detail:any)=> {
       if(detail.username === this.userName && detail.password === this.password){
-        this.router.navigate(["/app"])
+        this.router.navigate(["/dashboard"])
       }
     });
 
