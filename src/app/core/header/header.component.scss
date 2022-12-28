@@ -1,0 +1,38 @@
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(190, 201, 201);
+    padding: 20px 0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: aqua;
+    
+
+    div {
+        margin: 0px;
+        padding: 0px;
+        
+
+        img {
+            height: 120px;
+            width: 120px;}
+    }
+
+    h1 {
+        margin-left: 30px;
+        font-size: 50px;
+        font-style: unset;
+        margin-top: 25px;
+    }
+}
+
+// .demo{
+
+//     height: 100px;
+//     text-align: center;
+//     font-weight: bolder;
+//     .icon{
+//         float: left;
+//         font-size: large;
+//     }
+// }

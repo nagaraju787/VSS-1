@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RouterModule,
     MatButtonModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
