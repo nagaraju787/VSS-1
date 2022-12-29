@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { CoreModule } from './core/core.module';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CoreModule } from './core/core.module';
     RegistrationComponent,
     LoginComponent,
     DashboardComponent,
+    ForgetPasswordComponent,
 ],
   imports: [
     BrowserModule,
