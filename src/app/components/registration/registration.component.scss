@@ -1,17 +1,34 @@
+div{
+    margin-top: 20px;
+}
 .p1 {
     display: flex;
     justify-content: center;
     //border: 2px solid black;
     width: 500px;
     margin: auto;
-    background: #ddd;
+    background: aquamarine;
     border-radius: 5px;
 }
 h1 {
-    font-size: 30px;
+    font-size: 40px;
+    color:orchid;
+}
+button{
+    background: rgb(221, 24, 139);
+    font-size: 20px;
 }
 
 .error {
     color: red;
+}
+
+.fName,.lName,.email,.pswd,.cpswd,.phno,.addrs{
+    position: relative;
+    span{
+        position:absolute;
+        top: 45px;
+        left: 310px;
+    }
 }
 
