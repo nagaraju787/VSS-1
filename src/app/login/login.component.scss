@@ -1,0 +1,72 @@
+.main-container{
+    width:100%;
+    height:600px;
+   background-image:url(../../assets/images.jpg);
+}
+.main {
+    position:relative;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: auto;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    top:50px;
+    background-color: rgba(0,0,0,0.2);
+   //justify-content: center;
+   //align-items: center;
+    h3 {
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 10px
+    }
+    .user{
+        position: relative;
+        .accountIcon{
+            position: absolute;
+            left:75px
+        }
+    }
+   }
+
+
+
+input {
+    border: none;
+    outline: none;
+   border-bottom: 2px solid gray;
+    width: 200px;
+    
+}
+input:hover{
+    border-bottom: 2px solid black;
+}
+select{
+    width:150px;
+    left:20px
+}
+.routers{
+    display: flex;
+    justify-content: space-around;
+    a{
+        color: palevioletred;
+    }
+
+}
+.checkbox{
+    position:relative;
+    label{
+        position: absolute;
+        left:100px
+    }
+}
+.select{
+    position: relative;
+    select{
+        position: absolute;
+        left:100px
+    }
+}
+button{
+    width:200px
+}

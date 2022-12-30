@@ -1,0 +1,34 @@
+<div class="main-container">
+    <div class="main">
+        <b>
+            <h3>Log in</h3>
+        </b>
+        <!-- <form action=""> -->
+        <div class="user">
+            <mat-icon class="accountIcon">account_circle</mat-icon>
+            <input matInput placeholder="User Name" [(ngModel)]="userName"> <br><br><br>
+        </div>
+        <div class="user">
+            <mat-icon class="accountIcon">lock</mat-icon>
+            <input type="password" matInput placeholder="Password" [(ngModel)]="password"><br><br><br>
+        </div>
+        <div class="select">
+
+            <select name="user" id="" [(ngModel)]="user">
+                <option value="undefined" selected disabled>Select User Type</option>
+                <option value="{{user}}" *ngFor="let user of userType">{{user}}</option>
+                <!-- <option value="Agent">Agent</option> -->
+            </select><br><br>
+        </div>
+        <div class="checkbox">
+            <label for="check"><input type="checkbox" id="check" style="width:25px">Remember me</label><br><br>
+        </div>
+        <button mat-raised-button color="primary" (click)="login()">Login</button>
+        <!-- </form> -->
+        <br><br>
+        <div class="routers">
+            <a [routerLink]="['/registration']">Register</a>
+            <a [routerLink]="['/forgetpassword']">Forgot Password</a>
+        </div><br><br>
+    </div>
+</div>
