@@ -10,7 +10,8 @@ import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { InvoicesModule } from './invoices/invoices.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RegistrationComponent,
     LoginComponent,
     DashboardComponent,
+    
 ],
   imports: [
     BrowserModule,
@@ -27,7 +29,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RouterModule,
     MatButtonModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+   InvoicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
