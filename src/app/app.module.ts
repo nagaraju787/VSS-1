@@ -12,6 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { ForgetpasswordlinkComponent } from './components/forgetpasswordlink/forgetpasswordlink.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
+    ForgetpasswordlinkComponent,
 ],
   imports: [
     BrowserModule,

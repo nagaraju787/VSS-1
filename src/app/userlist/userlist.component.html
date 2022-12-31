@@ -1,9 +1,21 @@
-<p>this nagaraju</p>
-<p>this nagaraju</p>
-<p>this nagaraju</p>
-<p>this nagaraju</p>
-<p>this nagaraju</p>
-<p>this nagaraju</p>
-<p>this nagaraju</p>
-<p>this nagaraju</p>
-<p>this nagaraju</p>
+<div class="main-containter">
+    <div class='userList' *ngIf="booleanvalue">
+     <table>
+        <thead>
+            <tr>
+              <th>UserName</th>
+              <th>UserAction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of  users">
+                <td>{{x.name}}</td>
+                <td><button class="btn btn-danger" [routerLink]="['userDetails',x.id]" (click)="details()">details>></button></td>
+            </tr>
+        </tbody>
+     </table>
+    </div>
+    <div class="routerOutlet" *ngIf="!booleanvalue">
+        <router-outlet></router-outlet>
+    </div>
+</div>
