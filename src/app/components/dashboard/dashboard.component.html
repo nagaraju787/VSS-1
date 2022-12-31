@@ -1,5 +1,5 @@
-<app-header></app-header>
-<div>
+<app-header class="header"></app-header>
+<div style="min-height:450px;">
     <div class="main-container" >
         <div class="sub-container" *ngFor="let item of dashBoardMenu"
         [routerLink]="item.route" routerLinkActive='active'>{{item.name}}
