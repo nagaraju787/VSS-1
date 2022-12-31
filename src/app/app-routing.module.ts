@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:"registration",pathMatch:"full",component:RegistrationComponent},
   //{path:"invoice",loadChildren:()=>import('./invoices/invoices.module').then(m=>m.InvoicesModule)},
   {path:"invoice",component:InvoicesComponent},
-  {path:"",pathMatch:"full",redirectTo:"login"}
+  {path:"",pathMatch:"full",redirectTo:"login"},
   {path:"forgetpassword",pathMatch:"full",component:ForgetPasswordComponent},
   {path:"",pathMatch:"full",redirectTo:"login"},
   { path: 'dashBoard', loadChildren: () => import('./components/dashboard/dashboard.module').then(m => m.DashboardModule) }
