@@ -1,12 +1,15 @@
 <app-header></app-header>
-<div class="main-container" >
-    <div class="sub-container" *ngFor="let item of dashBoardMenu"
-       [routerLink]="item.route" routerLinkActive='active'>{{item.name}}
-
+<div>
+    <div class="main-container" >
+        <div class="sub-container" *ngFor="let item of dashBoardMenu"
+        [routerLink]="item.route" routerLinkActive='active'>{{item.name}}
+        </div>
+    </div>
+    <div class="outerOutlet">
+        <router-outlet></router-outlet> 
     </div>
 </div>
-<div class="outerOutlet">
-    <router-outlet></router-outlet> 
+<div style="width:100%;">
+   <app-footeer></app-footeer>
 </div>
-<app-footeer></app-footeer>
 
