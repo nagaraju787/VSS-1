@@ -1,47 +1,66 @@
-<div class="p1">
+<div>
+<div class="p1" *ngIf="naga">
     <form [formGroup]="RegForm" (ngSubmit)="save()">
-        <div class="p2">
             <h1>Registaration Form</h1>
-        </div>
-        <div class="form-group row">
+        <div class="form-group row fName">
             <label for="fName" class="col-sm-2 col-form-label">FirstName:</label>
-            <input type="text" class="form-control" id="fName" placeholder="Enter FirstName">
+            <input type="text" formControlName="fname" class="form-control"  maxlength="20"id="fName" placeholder="Enter FirstName">
+            <ng-container *ngIf="(getRegFormControl('fname').touched || getRegFormControl('fname').dirty) && getRegFormControl('fname').invalid">
+                <div class="error" *ngIf="getRegFormControl('fname')?.errors['required']">fname is required</div>
+                <div class="error" *ngIf="getRegFormControl('fname')?.errors['minlength']">min.8 letters has required</div><br>
+              </ng-container>
+            <!-- <span style="color: rgb(9, 245, 80);"><i class="bi bi-check-circle-fill"></i></span>
+            <span style="color:red"><i class="bi bi-x-circle-fill"></i></span> -->
         </div>
-        <div class="form-group row">
+        <div class="form-group row lName">
             <label for="lName" class="col-sm-2 col-form-label">LastName:</label>
-            <input type="text" class="form-control" id="lName" placeholder="Enter LastName">
+            <input type="text"formControlName="lname" class="form-control" id="lName" placeholder="Enter LastName">
+            <span style="color: rgb(9, 245, 80);"><i class="bi bi-check-circle-fill"></i></span>
+            <span style="color:red"><i class="bi bi-x-circle-fill"></i></span>
         </div>
-        <div class="form-group row">
+        <div class="form-group row email">
             <label for="Email" class="col-sm-2 col-form-label">Email:</label>
-            <input type="text" class="form-control" id="Email" placeholder="Enter Email">
+            <input type="text" formControlName="email" class="form-control" id="Email" placeholder="Enter Email">
+            <span style="color: rgb(9, 245, 80);"><i class="bi bi-check-circle-fill"></i></span>
+            <span style="color:red"><i class="bi bi-x-circle-fill"></i></span>
         </div>
-        <div class="form-group row">
+        <div class="form-group row pswd">
             <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
             <input type="password" formControlName="Pswd" class="form-control" id="inputPassword"
                 placeholder="Enter Password">
-            <div class="error" *ngIf="getRegFormControl('Pswd').invalid.getRegFormControl('Pswd')?.errors['required']">
+                <span style="color: rgb(9, 245, 80);"><i class="bi bi-check-circle-fill"></i></span>
+                <span style="color:red"><i class="bi bi-x-circle-fill"></i></span>
+                 <div class="error" *ngIf="getRegFormControl('Pswd').invalid.getRegFormControl('Pswd')?.errors['required']">
                 Pswd is required</div>
             <div class="error" *ngIf="getRegFormControl('Pswd').invalid.getRegFormControl('Pswd')?.errors['minlength']">
                 min.8 letters has required</div>
         </div>
-        <div class="form-group row">
+        <div class="form-group row cpswd">
             <label for="inputPassword" class="col-sm-2 col-form-label">ConformPassword:</label>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Enter Conform Password">
-            <div class="error"
-                *ngIf="getRegFormControl('CPswd').invalid.getRegFormControl('CPswd')?.errors['required']">CPswd is
-                required</div>
-            <div class="error"
-                *ngIf="getRegFormControl('CPswd').invalid.getRegFormControl('CPswd')?.errors['minlength']">min.8 letters
-                has required</div>
+            <input type="password" formControlName="CPswd" class="form-control" id="inputPassword" placeholder="Enter Conform Password">
+            <span style="color: rgb(9, 245, 80);"><i class="bi bi-check-circle-fill"></i></span>
+            <span style="color:red"><i class="bi bi-x-circle-fill"></i></span>
         </div>
-        <div class="form-group row">
+        <div class="form-group row phno">
             <label for="Ph.no" class="col-sm-2 col-form-label">Ph.No:</label>
-            <input type="number" class="form-control" id="Ph.no" placeholder="Enter Ph.No">
+            <input type="number" formControlName="phno" class="form-control" id="Ph.no" placeholder="Enter Ph.No">
+            <span style="color: rgb(9, 245, 80);"><i class="bi bi-check-circle-fill"></i></span>
+            <span style="color:red"><i class="bi bi-x-circle-fill"></i></span>
         </div>
-        <div class="form-group row">
+        <div class="form-group row addrs">
             <label for="address" class="col-sm-2 col-form-label">Address:</label>
-            <input type="text" class="form-control w-30" id="address" placeholder="Enter Address">
+            <input type="text" formControlName="address" class="form-control w-30" id="address" placeholder="Enter Address">
+            <span style="color: rgb(9, 245, 80);"><i class="bi bi-check-circle-fill"></i></span>
+            <span style="color:red"><i class="bi bi-x-circle-fill"></i></span>
         </div><br>
-        <button type="submit">Save</button>
+        <button type="submit" class="btn btn-primary">Save</button><br><br>
     </form>
+</div>
+</div>
+<div *ngIf="!naga">
+    <h1 style="color: rgb(9, 245, 68);">Registaration is succesfully </h1>
+    <div>
+         <span>please go to login page</span>&nbsp;&nbsp;
+        <a [routerLink]="['/login']">login</a>
+    </div>
 </div>

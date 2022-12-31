@@ -1,21 +1,34 @@
+div{
+    margin-top: 20px;
+}
 .p1 {
     display: flex;
     justify-content: center;
     //border: 2px solid black;
-    width:500px;
-    margin:auto;
-    background: #ddd;
+    width: 500px;
+    margin: auto;
+    background: aquamarine;
     border-radius: 5px;
 }
-.p2{
-    background: rgb(30, 30, 231);
-}
 h1 {
-    font-size: 30px;
-}
-.error{
-    color:red;
+    font-size: 40px;
+    color:orchid;
 }
 button{
-    background: rgb(30, 30, 231);
+    background: rgb(221, 24, 139);
+    font-size: 20px;
 }
+
+.error {
+    color: red;
+}
+
+.fName,.lName,.email,.pswd,.cpswd,.phno,.addrs{
+    position: relative;
+    span{
+        position:absolute;
+        top: 45px;
+        left: 310px;
+    }
+}
+
