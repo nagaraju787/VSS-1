@@ -4,6 +4,11 @@
     min-height:400px;
     .userList{
         margin:0px 50px 0px;
+        table,th,td{
+            border: solid 1px rgb(207, 197, 197);
+            border-collapse: collapse;
+            padding:2px 20px;
+        }
     }
     .routerOutlet{
     border: 1px solid black;
