@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CoreModule } from 'src/app/core/core.module';
 import { DashboardComponent } from './dashboard.component';
 import { DashBoardRoutingModule } from './dashboard-routing.module ';
+import { InvoicesModule } from 'src/app/invoices/invoices.module';
 
 
 
@@ -13,7 +14,8 @@ import { DashBoardRoutingModule } from './dashboard-routing.module ';
   imports: [
     CommonModule,
      DashBoardRoutingModule,
-    CoreModule
+    CoreModule,
+    InvoicesModule
   ]
 })
 export class DashboardModule { }
