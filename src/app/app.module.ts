@@ -9,9 +9,6 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-
-import { CoreModule } from './core/core.module';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 
 @NgModule({
@@ -19,7 +16,6 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    DashboardComponent,
     ForgetPasswordComponent,
 ],
   imports: [
@@ -31,7 +27,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     MatButtonModule,
     FormsModule,
     MatIconModule,
-    CoreModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
