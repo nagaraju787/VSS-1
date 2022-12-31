@@ -9,10 +9,10 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 dashBoardMenu:any=[
-  {name:"Home",route:"/home"},
-  {name:"UserList",route:"/userList"},
-  {name:"Invoice",route:"/invoice"},
-  {name:"ContactUs",route:"/ContactUs"}
+  {name:"Home",route:"/dashBoard/home"},
+  {name:"UserList",route:"/dashBoard/userList"},
+  {name:"Invoice",route:"/dashBoard/invoice"},
+  {name:"ContactUs",route:"/dashBoard/ContactUs"}
 ];
   ngOnInit(): void {
   }
