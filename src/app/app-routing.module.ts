@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './components/registration/registration.component';
 //import { InvoicesComponent } from './invoices/invoices.component';
 import { LoginComponent } from './login/login.component';
+import { ForgetpasswordlinkComponent } from './components/forgetpasswordlink/forgetpasswordlink.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -11,6 +12,7 @@ const routes: Routes = [
   //{path:"invoice",loadChildren:()=>import('./invoices/invoices.module').then(m=>m.InvoicesModule)},
   //{path:"invoice",component:InvoicesComponent},
   {path:"",pathMatch:"full",redirectTo:"login"},
+  {path:"forgetpasswordemailLink",component:ForgetpasswordlinkComponent},
   {path:"forgetpassword",pathMatch:"full",component:ForgetPasswordComponent},
   {path:"",pathMatch:"full",redirectTo:"login"},
   { path: 'dashBoard', loadChildren: () => import('./components/dashboard/dashboard.module').then(m => m.DashboardModule) }
