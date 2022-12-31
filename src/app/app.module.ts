@@ -10,7 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { InvoicesModule } from './invoices/invoices.module';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     MatButtonModule,
     FormsModule,
     MatIconModule,
-   
+    HttpClientModule,
+   InvoicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
