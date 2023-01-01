@@ -14,10 +14,12 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
 export class InvoicesComponent implements OnInit,AfterViewInit {
   invoicesList: any;
   list:any;
-  displayedColumns:string[]=["id","name","email","phone","view","update","delete"];
+  displayedColumns:string[]=["id","name","email","phone","actions"];
   datasource = new MatTableDataSource<any>([]);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  spinner:any=true;
+  
 
   constructor(private vssService: VssService,private _liveAnnouncer: LiveAnnouncer) { }
 
@@ -33,7 +35,8 @@ export class InvoicesComponent implements OnInit,AfterViewInit {
     this.vssService.getInvoices().subscribe((data:any) => {
       this.invoicesList = data;
       this.datasource.data = data;
-      console.log(this.datasource.data)
+      console.log(this.datasource.data);
+      this.spinner = false;
     })
   }
   applyFilter(event: Event) {
