@@ -8,26 +8,29 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class RegistrationComponent implements OnInit {
    RegForm!:FormGroup;
-   naga:Boolean=true
+   naga:Boolean= true;
   constructor(private fb:FormBuilder) { }
    
   ngOnInit(): void {
     this.RegForm = this.fb.group({
       fname:['',[Validators.required,Validators.minLength(8)]],
-      lname:['',[Validators.required]],
-      email:['',[Validators.required]],
+      lname:['',[Validators.required,Validators.minLength(8)]],
+      email:['',[Validators.required,Validators.email]],
       Pswd: ['',[Validators.required,Validators.minLength(8)]],
       CPswd: ['',[Validators.required,Validators.minLength(8)]],
-      phno:['',[Validators.required]],
-      address:['',[Validators.required]]
+      phno:['',[Validators.required,Validators.pattern("^[1-9]{10}$"),Validators.maxLength(10)]],
+      address:['',[Validators.required,Validators.minLength(20)]],
+      uname:['',[Validators.required,Validators.minLength(8)]],
+      UPswd:['',[Validators.required,Validators.minLength(8)]]
     })
   }
   getRegFormControl(key: string):any{
     return this.RegForm.get(key);
   }
-  save(){
+   save(){
       console.log(this.RegForm.value);
-      this.naga=false;
+      this.naga= false;
      }
-  }
+
+  }     
  
