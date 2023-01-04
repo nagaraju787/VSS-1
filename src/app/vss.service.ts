@@ -15,10 +15,21 @@ export class VssService {
     {username:"Nagaraju",password:"Nagaraju@123",usertype:"Admin"},
     {username:"Singam",password:"Singam@123",usertype:"Agent"},
   ];
+  //for getting invoices
   getInvoices(){
-    return this.http.get("https://jsonplaceholder.typicode.com/users")
+    // return this.http.get("https://jsonplaceholder.typicode.com/users");
+    return this.http.get(environment.apiBaseUrl + "invoices")
   }
   saveUser(userData: any) {
     return this.http.post(environment.apiBaseUrl + 'users', userData);
   }
+  //for deleting invoices
+  deleteInvoice(id:any){
+    return this.http.delete(environment.apiBaseUrl + "invoices/"+id)
+  }
+  //for adding invoices
+  addInvoice(invoice:any){
+    return this.http.post(environment.apiBaseUrl + 'invoices', invoice);
+  }
+
 }

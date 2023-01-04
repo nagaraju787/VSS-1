@@ -25,13 +25,25 @@ table {
     background-color: whitesmoke;
   }
 }
+.topRow{
+ display: flex;
+justify-content: space-between; 
 
 mat-form-field {
   font-size: 14px;
-  width: 30%;
+  width: 200px;
+  margin:5px 0 0 5px;
   //background-color:white;
   //border:2px solid red;
-  
+}
+.addInvoice{
+  color:white;
+  background-color: green;
+  border:none;
+  padding:5px;
+  border-radius: 5px;
+  margin:22px 10px 0 0
+}
 }
 
 th {
@@ -56,4 +68,37 @@ mat-spinner{
 
 .actions{
   padding-left: 30px;
+}
+.showForm{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+      width:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.5);
+      z-index: 100; 
+      .subForm{
+        background-color: white;
+        padding:30px;
+        height:350px;
+        div{
+          margin:15px
+        }
+        .btns{
+          display: flex;
+          justify-content: space-between;
+          margin-top:30px
+        }
+      }
+}
+.mat-paginator-outer-container {
+  display: flex;
+  background-color:#ddd;
+  color: black;
+}
+.mat-form-field-flex ng-tns-c76-5{
+  color:black
 }
