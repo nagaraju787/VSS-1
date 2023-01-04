@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forgetpasswordlink.component.scss']
 })
 export class ForgetpasswordlinkComponent implements OnInit {
+getRegFormControl(arg0: string) {
+throw new Error('Method not implemented.');
+}
 
   constructor(private router:Router) { }
 
