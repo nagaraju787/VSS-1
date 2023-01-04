@@ -15,6 +15,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { ForgetpasswordlinkComponent } from './components/forgetpasswordlink/forgetpasswordlink.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { ForgetpasswordlinkComponent } from './components/forgetpasswordlink/for
     LoginComponent,
     ForgetPasswordComponent,
     ForgetpasswordlinkComponent,
+   
 ],
   imports: [
     BrowserModule,
