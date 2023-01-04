@@ -12,7 +12,7 @@ dashBoardMenu:any=[
   {name:"Home",route:"/dashBoard/home"},
   {name:"UserList",route:"/dashBoard/userList"},
   {name:"Invoice",route:"/dashBoard/invoices"},
-  {name:"ContactUs",route:"/dashBoard/ContactUs"}
+  {name:"ContactUs",route:"/dashBoard/contactus"}
 ];
   ngOnInit(): void {
   }
