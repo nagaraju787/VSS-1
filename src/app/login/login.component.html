@@ -1,34 +1,54 @@
 <div class="main-container">
-    <div class="main">
-        <b>
-            <h3>Log in</h3>
-        </b>
-        <!-- <form action=""> -->
-        <div class="user">
-            <mat-icon class="accountIcon">account_circle</mat-icon>
-            <input matInput placeholder="User Name" [(ngModel)]="userName"> <br><br><br>
+    <div class="sub-container">
+        <div class="bottom-container text-white">
+            <img src="./../../assets/apple.jpg" alt="VSS Project">
+            <span>VSS Project</span>
         </div>
-        <div class="user">
-            <mat-icon class="accountIcon">lock</mat-icon>
-            <input type="password" matInput placeholder="Password" [(ngModel)]="password"><br><br><br>
+        <div class="login-container h-75 p-5">
+            <h4 style="color: #353030;">Login to vss project</h4>
+            <form [formGroup]="LoginForm">
+                <div class="userName mt-3">
+                    <mat-icon class="accountIcon">account_circle</mat-icon>
+                    <input type="text" class="form-control" formControlName="userName" maxlength="10" 
+                    placeholder="User Name">
+                </div>
+                <div class="password mt-3">
+                    <mat-icon class="accountIcon">lock</mat-icon>
+                    <input type="text" class="form-control"  formControlName="password" 
+                    placeholder="Password">
+                </div>
+                <div class="select mt-3">
+                    <select class="form-select form-select "  name="user">
+                        <option value="undefined" selected disabled>Select User Type</option>
+                        <option value="{{user}}" *ngFor="let user of userType">{{user}}</option>
+                    </select>
+                </div>
+                <div class="text-error text-danger">
+                    <!-- <p>please enter valid username</p>
+                    <p>please enter valid password </p> -->
+                </div>
+                <div>
+                    <button class="btn btn-danger mt-3 w-100" (click)="login()">Login</button>
+                </div>
+                <div class="routers mt-3">
+                    <a [routerLink]="['/registration']">Register</a>
+                    <a [routerLink]="['/forgetpasswordemailLink']">Forgot Password</a>
+                </div>
+                <div class="border mt-4"></div>
+                <div class="login-bottom mt-4">
+                    <p>Or sign in with</p>
+                    <div>
+                        <img src="./../../assets/sign-google.png" alt="Google">
+                        <img src="./../../assets//sign-lark.png" alt="Twitter">
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="select">
-
-            <select name="user" id="" [(ngModel)]="user">
-                <option value="undefined" selected disabled>Select User Type</option>
-                <option value="{{user}}" *ngFor="let user of userType">{{user}}</option>
-                <!-- <option value="Agent">Agent</option> -->
-            </select><br><br>
+        <div class="left-text-container text-white">
+             <h1>Design + Collaboration, all in VSS Project</h1>
+             <p>A virtual center for designers, devs, PMs, and all design parties to perform their
+                 duties in unison. At least 200% faster with Vss Project.
+             </p>
         </div>
-        <div class="checkbox">
-            <label for="check"><input type="checkbox" id="check" style="width:25px">Remember me</label><br><br>
-        </div>
-        <button mat-raised-button color="primary" (click)="login()">Login</button>
-        <!-- </form> -->
-        <br><br>
-        <div class="routers">
-            <a [routerLink]="['/registration']">Register</a>
-            <a [routerLink]="['/forgetpasswordemailLink']">Forgot Password</a>
-        </div><br><br>
     </div>
 </div>
