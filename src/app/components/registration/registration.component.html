@@ -1,15 +1,14 @@
-<div class="p1" *ngIf="naga">
-    <form [formGroup]="RegForm" (ngSubmit)="save()">
-        <h1>Registaration Form</h1>
+<div id="p1">
+<div  class="p1" *ngIf="naga">
+    <form [formGroup]="RegForm" (ngSubmit)="save()"><br>
+        <h1>Registaration Form</h1><br>
         <div class="form-group">
-            <label for="fName" class="col-sm-2 col-form-label">FirstName:</label>
-            <input type="text" formControlName="fname" class="form-control" maxlength="50" id="fName"
+            <label for="fname" id="v1" class="col-sm-2 col-form-label">FirstName*:</label>
+            <input type="text" formControlName="fname" maxlength="20" class="form-control" id="fname"
                 placeholder="Enter FirstName">
             <ng-container
                 *ngIf="(getRegFormControl('fname').touched || getRegFormControl('fname').dirty) && getRegFormControl('fname').invalid">
-                <div class="error" *ngIf="getRegFormControl('fname')?.errors['required']">fname is required</div>
-                <div class="error" *ngIf="getRegFormControl('fname')?.errors['minlength']">min.8 letters has required
-                </div>
+                <div class="error" *ngIf="getRegFormControl('fname')?.errors['required']">FirstName is required</div>
             </ng-container>
             <span style="color:red"
                 *ngIf="(getRegFormControl('fname').touched || getRegFormControl('fname').dirty) && getRegFormControl('fname').invalid"><i
@@ -18,14 +17,12 @@
                     class="bi bi-check-circle-fill"></i></span>
         </div>
         <div class="form-group">
-            <label for="lName" class="col-sm-2 col-form-label">LastName:</label>
+            <label for="lName" id="v1" class="col-sm-2 col-form-label">LastName*:</label>
             <input type="text" formControlName="lname" maxlength="50" class="form-control" id="lName"
                 placeholder="Enter LastName">
             <ng-container
                 *ngIf="(getRegFormControl('lname').touched || getRegFormControl('lname').dirty) && getRegFormControl('lname').invalid">
                 <div class="error" *ngIf="getRegFormControl('lname')?.errors['required']">lname is required</div>
-                <div class="error" *ngIf="getRegFormControl('lname')?.errors['minlength']">min.8 letters has required
-                </div>
             </ng-container>
             <span style="color:red"
                 *ngIf="(getRegFormControl('lname').touched || getRegFormControl('lname').dirty) && getRegFormControl('lname').invalid"><i
@@ -34,7 +31,7 @@
                     class="bi bi-check-circle-fill"></i></span>
         </div>
         <div class="form-group">
-            <label for="Email" class="col-sm-2 col-form-label">Email:</label>
+            <label for="Email" id="v1" class="col-sm-2 col-form-label">Email*:</label>
             <input type="text" formControlName="email" maxlength="150" class="form-control" id="Email"
                 placeholder="Enter Email">
             <ng-container
@@ -48,35 +45,7 @@
                     class="bi bi-check-circle-fill"></i></span>
         </div>
         <div class="form-group">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
-            <input type="password" formControlName="Pswd" maxlength="8" class="form-control" id="inputPassword"
-                placeholder="Enter Password">
-            <ng-container
-                *ngIf="(getRegFormControl('Pswd').touched || getRegFormControl('Pswd').dirty) && getRegFormControl('Pswd').invalid">
-                <div class="error" *ngIf="getRegFormControl('Pswd')?.errors['required']">Pswd is required</div>
-            </ng-container>
-            <span style="color:red"
-                *ngIf="(getRegFormControl('Pswd').touched || getRegFormControl('Pswd').dirty) && getRegFormControl('Pswd').invalid"><i
-                    class="bi bi-x-circle-fill"></i></span>
-            <span style="color: rgb(9, 245, 80);" *ngIf="getRegFormControl('Pswd').valid"><i
-                    class="bi bi-check-circle-fill"></i></span>
-        </div>
-        <div class="form-group">
-            <label for="inputPassword" class="col-sm-2 col-form-label">ConformPassword:</label>
-            <input type="password" formControlName="CPswd" maxlength="8" class="form-control" id="inputPassword"
-                placeholder="Enter Conform Password">
-            <ng-container
-                *ngIf="(getRegFormControl('CPswd').touched || getRegFormControl('CPswd').dirty) && getRegFormControl('CPswd').invalid">
-                <div class="error" *ngIf="getRegFormControl('CPswd')?.errors['required']">CPswd is required</div>
-            </ng-container>
-            <span style="color:red"
-                *ngIf="(getRegFormControl('CPswd').touched || getRegFormControl('CPswd').dirty) && getRegFormControl('CPswd').invalid"><i
-                    class="bi bi-x-circle-fill"></i></span>
-            <span style="color: rgb(9, 245, 80);" *ngIf="getRegFormControl('CPswd').valid"><i
-                    class="bi bi-check-circle-fill"></i></span>
-        </div>
-        <div class="form-group">
-            <label for="Ph.no" class="col-sm-2 col-form-label">Ph.No:</label>
+            <label for="Ph.no" id="v1" class="col-sm-2 col-form-label">Ph.No*:</label>
             <input type="number" formControlName="phno" class="form-control" minlength="10" id="Ph.no"
                 placeholder="Enter Ph.No">
             <ng-container
@@ -90,11 +59,12 @@
                     class="bi bi-x-circle-fill"></i></span>
             <span style="color: rgb(9, 245, 80);" *ngIf="getRegFormControl('phno').valid"><i
                     class="bi bi-check-circle-fill"></i></span>
+
         </div>
         <div class="form-group">
-            <label for="address" class="col-sm-2 col-form-label">Address:</label>
-            <textarea type="text" formControlName="address" maxlength="50" class="form-control w-30" id="address"
-                placeholder="Enter Address"></textarea>
+            <label for="address" id="v1" class="col-sm-2 col-form-label">Address*:</label>
+            <input type="text" formControlName="address" maxlength="50" class="form-control w-30" id="address"
+                placeholder="Enter Address">
             <ng-container
                 *ngIf="(getRegFormControl('address').touched || getRegFormControl('address').dirty) && getRegFormControl('address').invalid">
                 <div class="error" *ngIf="getRegFormControl('address')?.errors['required']">address is required</div>
@@ -108,14 +78,12 @@
                     class="bi bi-check-circle-fill"></i></span>
         </div>
         <div class="form-group">
-            <label for="uName" class="col-sm-2 col-form-label">UserName:</label>
+            <label for="uName" id="v1" class="col-sm-2 col-form-label">UserName*:</label>
             <input type="text" formControlName="uname" maxlength="20" class="form-control w-30" id="uname"
                 placeholder="Enter UserName">
             <ng-container
                 *ngIf="(getRegFormControl('uname').touched || getRegFormControl('uname').dirty) && getRegFormControl('uname').invalid">
                 <div class="error" *ngIf="getRegFormControl('uname')?.errors['required']">UserName is required</div>
-                <div class="error" *ngIf="getRegFormControl('uname')?.errors['minlength']">min.20 letters has required
-                </div>
             </ng-container>
             <span style="color:red"
                 *ngIf="(getRegFormControl('uname').touched || getRegFormControl('uname').dirty) && getRegFormControl('uname').invalid"><i
@@ -124,21 +92,40 @@
                     class="bi bi-check-circle-fill"></i></span>
         </div>
         <div class="form-group">
-            <label for="userPassword" class="col-sm-2 col-form-label">UserPassword:</label>
-            <input type="password" formControlName="UPswd" maxlength="8" class="form-control" id="userinputPassword"
-                placeholder="Enter UserPassword">
+            <label for="password" id="v1" class="col-sm-2 col-form-label">Password*:</label>
+            <input type="password" formControlName="pswd" maxlength="20" class="form-control" id="password"
+                placeholder="Enter Password">
             <ng-container
-                *ngIf="(getRegFormControl('UPswd').touched || getRegFormControl('UPswd').dirty) && getRegFormControl('UPswd').invalid">
-                <div class="error" *ngIf="getRegFormControl('UPswd')?.errors['required']">UPswd is required</div>
+                *ngIf="(getRegFormControl('pswd').touched || getRegFormControl('pswd').dirty) && getRegFormControl('pswd').invalid">
+                <div class="error" *ngIf="getRegFormControl('pswd')?.errors['required']">pswd is required</div>
+                <div class="error" *ngIf="getRegFormControl('pswd')?.errors['minlength']">min.8 letters has required
+                </div>
             </ng-container>
             <span style="color:red"
-                *ngIf="(getRegFormControl('UPswd').touched || getRegFormControl('UPswd').dirty) && getRegFormControl('UPswd').invalid"><i
+                *ngIf="(getRegFormControl('pswd').touched || getRegFormControl('pswd').dirty) && getRegFormControl('pswd').invalid"><i
                     class="bi bi-x-circle-fill"></i></span>
-            <span style="color: rgb(9, 245, 80);" *ngIf="getRegFormControl('UPswd').valid"><i
+            <span style="color: rgb(9, 245, 80);" *ngIf="getRegFormControl('pswd').valid"><i
+                    class="bi bi-check-circle-fill"></i></span>
+        </div>
+        <div class="form-group">
+            <label for="cpassword" id="v1" class="col-sm-2 col-form-label">ConfirmPassword*:</label>
+            <input type="password" formControlName="cpswd" maxlength="20" class="form-control" id="cpassword"
+                placeholder="Enter ConfirmPassword">
+            <ng-container
+                *ngIf="(getRegFormControl('cpswd').touched || getRegFormControl('cpswd').dirty) && getRegFormControl('cpswd').invalid">
+                <div class="error" *ngIf="getRegFormControl('cpswd')?.errors['required']">cpswd is required</div>
+                <div class="error" *ngIf="getRegFormControl('cpswd')?.errors['minlength']">min.8 letters has required
+                </div>
+            </ng-container>
+            <span style="color:red"
+                *ngIf="(getRegFormControl('cpswd').touched || getRegFormControl('cpswd').dirty) && getRegFormControl('cpswd').invalid"><i
+                    class="bi bi-x-circle-fill"></i></span>
+            <span style="color: rgb(9, 245, 80);" *ngIf="getRegFormControl('cpswd').valid"><i
                     class="bi bi-check-circle-fill"></i></span>
         </div><br>
-        <button type="submit" [disabled]="RegForm.invalid">Save</button><br><br>
+        <button type="submit" class="btn btn-success" [disabled]="RegForm.invalid">Save</button><br><br><br>
     </form>
+</div>
 </div>
 <div *ngIf="!naga" class="s1">
     <div class="s2">
