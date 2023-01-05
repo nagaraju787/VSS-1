@@ -4,7 +4,7 @@
             <img src="./../../assets/apple.jpg" alt="VSS Project">
             <span>VSS Project</span>
         </div>
-        <div class="login-container h-75 p-5">
+        <div class="login-container p-5">
             <h4 style="color: #353030;">Login to vss project</h4>
             <form [formGroup]="LoginForm">
                 <div class="userName mt-3">
@@ -23,12 +23,19 @@
                         <option value="{{user}}" *ngFor="let user of userType">{{user}}</option>
                     </select>
                 </div>
-                <div class="text-error text-danger">
-                    <!-- <p>please enter valid username</p>
-                    <p>please enter valid password </p> -->
+                <div class="text-error text-danger mt-3">
+                    <!-- <ng-container
+                       *ngIf="(getLoginFormControl('userName').touched || getLoginFormControl('userName').dirty) && getLoginFormControl('userName').invalid ">
+                       <p *ngIf="getLoginFormControl('userName')?.errors['required']">please Enter valid userName..</p>
+                    </ng-container> -->
+                    <ng-container
+                       *ngIf="((getLoginFormControl('password').touched || getLoginFormControl('password').dirty) && getLoginFormControl('password').invalid) ||
+                       (getLoginFormControl('userName').touched || getLoginFormControl('userName').dirty) && getLoginFormControl('userName').invalid ">
+                       <p *ngIf="(getLoginFormControl('password')?.errors['required']) || (getLoginFormControl('userName')?.errors['required'])">invalid details</p>
+                    </ng-container>
                 </div>
                 <div>
-                    <button class="btn btn-danger mt-3 w-100" (click)="login()">Login</button>
+                    <button class="btn btn-danger mt-1 w-100" (click)="login()">Login</button>
                 </div>
                 <div class="routers mt-3">
                     <a [routerLink]="['/registration']">Register</a>
