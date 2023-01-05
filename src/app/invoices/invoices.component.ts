@@ -20,7 +20,10 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort;
   spinner: any = true;
   showForm: Boolean = false;
-  newInvoice:any={};
+  newInvoice: any = {};
+  isEdit: Boolean = false;
+  title: any;
+  btnText:any;
 
 
   constructor(private vssService: VssService, private _liveAnnouncer: LiveAnnouncer) { }
@@ -66,15 +69,33 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
     })
 
   }
-  addNewInvo(){
+  addNewInvo() {
+    this.title = "Add Invoice";
     this.showForm = true;
+    this.newInvoice = {};
+    this.btnText = "Add"
   }
-  cancel(){
+  cancel() {
     this.showForm = false;
   }
-  addChanges(ev:any){
+  addChanges() {
     this.showForm = false;
     console.log(this.newInvoice);
-    this.vssService.addInvoice(this.newInvoice).subscribe()
+    if (this.isEdit) {
+         this.vssService.editInvoice(this.newInvoice).subscribe(x=>console.log(x))
+    }
+    else {
+      this.vssService.addInvoice(this.newInvoice).subscribe()
+    }
+  }
+  editInvoice(invoice: any) {
+    this.showForm = true;
+    this.title = "Edit Invoice";
+    this.btnText = "Add Changes"
+    this.newInvoice.id = invoice.id;
+    this.newInvoice.name = invoice.name;
+    this.newInvoice.email = invoice.email;
+    this.newInvoice.phone = invoice.phone;
+    this.isEdit = true;
   }
 }
