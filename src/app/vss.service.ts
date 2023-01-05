@@ -31,5 +31,8 @@ export class VssService {
   addInvoice(invoice:any){
     return this.http.post(environment.apiBaseUrl + 'invoices', invoice);
   }
+  editInvoice(editedInv:any){
+    return this.http.put(environment.apiBaseUrl + "invoices/"+editedInv.id,editedInv)
+  }
 
 }

@@ -82,8 +82,9 @@ mat-spinner{
       z-index: 100; 
       .subForm{
         background-color: white;
-        padding:30px;
-        height:350px;
+        padding:20px 30px 30px;
+        height:380px;
+        border-radius: 5px;
         div{
           margin:15px
         }
@@ -101,4 +102,10 @@ mat-spinner{
 }
 .mat-form-field-flex ng-tns-c76-5{
   color:black
+}
+.form-control{
+  width:300px;
+  display: inline;
+  margin-left: 10px;
+  
 }
