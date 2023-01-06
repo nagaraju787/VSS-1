@@ -4,15 +4,27 @@
     justify-content: flex-start;
     background-color: rgb(190, 201, 201);
     padding: 20px 0px;
+.main-container{
+    background-color: rgb(194, 191, 20);
+    border-radius: 0px 25px 0px 25px;
+    height: auto;
+    position: relative;
     margin: 0px;
-    padding: 0px;
-    background-color: rgb(95, 107, 107);
-    
-    h1 {
-        margin-left: 30px;
-        font-size: 50px;
-        font-style: unset;
-        margin-top: 25px;
-        
+    .social{
+  position: absolute;
+  right:30px;
+  top: 10px;
+  margin-left: 25px;
+  
     }
+}
+h1{
+    text-align: center;
+    color: rgb(48, 40, 40);
+}
+.justy{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
 }
