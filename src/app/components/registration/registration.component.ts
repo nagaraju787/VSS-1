@@ -20,9 +20,9 @@ export class RegistrationComponent implements OnInit {
       email:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       phno:['',[Validators.required,Validators.pattern("^[1-9]{10}$"),Validators.maxLength(10)]],
       address:['',[Validators.required,Validators.minLength(20)]],
+      nationality: ['',[Validators.required,Validators.minLength(1)]],
       uname:['',[Validators.required,Validators.minLength(1)]],
       pswd: ['',[Validators.required,Validators.minLength(8)]],
-      cpswd: ['',[Validators.required,Validators.minLength(8)]],
     })
   }
   getRegFormControl(key: string):any{
