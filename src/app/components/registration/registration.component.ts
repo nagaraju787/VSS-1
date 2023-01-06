@@ -10,14 +10,14 @@ import { VssService } from 'src/app/vss.service';
 })
 export class RegistrationComponent implements OnInit {
    RegForm!:FormGroup;
-   naga:Boolean= true;
+   disabled:Boolean= true;
   constructor(private fb:FormBuilder,private vss:VssService,router:Router) { }
    
   ngOnInit(): void {
     this.RegForm = this.fb.group({
       fname:['',[Validators.required,Validators.minLength(1)]],
       lname:['',[Validators.required,Validators.minLength(1)]],
-      email:['',[Validators.required,Validators.email]],
+      email:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       phno:['',[Validators.required,Validators.pattern("^[1-9]{10}$"),Validators.maxLength(10)]],
       address:['',[Validators.required,Validators.minLength(20)]],
       uname:['',[Validators.required,Validators.minLength(1)]],
@@ -30,7 +30,7 @@ export class RegistrationComponent implements OnInit {
   }
    save(){
       console.log(this.RegForm.value);
-      this.naga= false;
+      this.disabled= false;
       const {cpswd, ...data} = this.RegForm.value;
        this.vss.saveUser(data).subscribe((res)=>{
          if(res) {
