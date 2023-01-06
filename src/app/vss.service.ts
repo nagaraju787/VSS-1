@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable, Subject } from 'rxjs';
 
+
 import {environment} from '../environments/environment'
 
 @Injectable({
@@ -11,7 +12,7 @@ export class VssService {
   passingback= new BehaviorSubject<any>(true)
   constructor(private http:HttpClient) { }
   //for getting invoices
-  getInvoices(){
+  getInvoices():Observable<any>{
     // return this.http.get("https://jsonplaceholder.typicode.com/users");
     return this.http.get(environment.apiBaseUrl + "invoices")
   }

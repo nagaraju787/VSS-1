@@ -67,7 +67,7 @@ mat-spinner{
 }
 
 .actions{
-  padding-left: 30px;
+  padding-left: 10px;
 }
 .showForm{
       display: flex;
@@ -75,23 +75,24 @@ mat-spinner{
       align-items: center;
       height:100%;
       width:100%;
-      position:absolute;
+      position:fixed;
       top:0;
       left:0;
       background:rgba(0,0,0,0.5);
       z-index: 100; 
       .subForm{
+       // position:fixed;
         background-color: white;
         padding:20px 30px 30px;
-        height:380px;
         border-radius: 5px;
+        height:350px;
         div{
           margin:15px
         }
         .btns{
           display: flex;
           justify-content: space-between;
-          margin-top:30px
+          margin-top:20px
         }
       }
 }
@@ -108,4 +109,33 @@ mat-spinner{
   display: inline;
   margin-left: 10px;
   
+}
+.dialogue{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.5);
+  z-index: 100; 
+  .subDialogue{
+    background-color: white;
+        padding:20px 30px 30px;
+        height:170px;
+        border-radius: 5px;
+        p{
+          margin-left:10px
+        }
+   .btns{
+    display:flex;
+    margin-left: 70px;
+    button{
+      margin:5px
+    }
+    
+   }        
+  }
 }

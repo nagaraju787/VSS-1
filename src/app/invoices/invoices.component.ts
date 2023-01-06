@@ -24,6 +24,9 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   isEdit: Boolean = false;
   title: any;
   btnText:any;
+  invoiceId:any;
+  showDeleteform:any = false;
+  
 
 
   constructor(private vssService: VssService, private _liveAnnouncer: LiveAnnouncer) { }
@@ -62,18 +65,24 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   }
   //delete Invoice
   deleteInv(id: any) {
-    this.vssService.deleteInvoice(id).subscribe((res) => {
-      console.log(res)
-      console.log(this.datasource.data.splice(1, id))
-      this.getInvoices()
-    })
-
+      this.invoiceId = id;
+    this. showDeleteform = true;
   }
+  //dialogue delete 
+     conifirmDelete(){
+      this.vssService.deleteInvoice(this.invoiceId).subscribe((res) => {
+        console.log(res)
+       // console.log(this.datasource.data.splice(1, this.invoiceId))
+        this.getInvoices()
+      });
+      this. showDeleteform = false;
+     }
   addNewInvo() {
     this.title = "Add Invoice";
     this.showForm = true;
     this.newInvoice = {};
-    this.btnText = "Add"
+    this.btnText = "Add";
+    
   }
   cancel() {
     this.showForm = false;
@@ -97,5 +106,10 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
     this.newInvoice.email = invoice.email;
     this.newInvoice.phone = invoice.phone;
     this.isEdit = true;
+
   }
+  cancelDelete(){
+     this. showDeleteform = false;
+  }
+  
 }
