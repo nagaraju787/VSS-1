@@ -18,22 +18,12 @@
                     placeholder="Password">
                 </div>
                 <div class="select mt-3">
-                    <select class="form-select form-select "  name="user">
-                        <option value="undefined" selected disabled>Select User Type</option>
+                    <select class="form-select form-select "  name="user" formControlName="userType">
+                        <option value="userType" selected disabled>Select User Type</option>
                         <option value="{{user}}" *ngFor="let user of userType">{{user}}</option>
                     </select>
                 </div>
-                <div class="text-error text-danger mt-3">
-                    <!-- <ng-container
-                       *ngIf="(getLoginFormControl('userName').touched || getLoginFormControl('userName').dirty) && getLoginFormControl('userName').invalid ">
-                       <p *ngIf="getLoginFormControl('userName')?.errors['required']">please Enter valid userName..</p>
-                    </ng-container> -->
-                    <ng-container
-                       *ngIf="((getLoginFormControl('password').touched || getLoginFormControl('password').dirty) && getLoginFormControl('password').invalid) ||
-                       (getLoginFormControl('userName').touched || getLoginFormControl('userName').dirty) && getLoginFormControl('userName').invalid ">
-                       <p *ngIf="(getLoginFormControl('password')?.errors['required']) || (getLoginFormControl('userName')?.errors['required'])">invalid details</p>
-                    </ng-container>
-                </div>
+                <div class="text-error text-danger mt-3">{{error}}</div>
                 <div>
                     <button class="btn btn-danger mt-1 w-100" (click)="login()">Login</button>
                 </div>
