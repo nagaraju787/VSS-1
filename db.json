@@ -1,9 +1,11 @@
 {
   "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "userName":"nagaraju",
+      "email":"nagaraju",
+      "password":"nagaraju",
+      "confirmpassword":"nagaraju",
+      "userType":"Agent"
     }
   ],
   "invoices": [

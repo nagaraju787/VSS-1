@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, map, Observable, Subject } from 'rxjs';
 
 import {environment} from '../environments/environment'
 
@@ -10,11 +10,6 @@ import {environment} from '../environments/environment'
 export class VssService {
   passingback= new BehaviorSubject<any>(true)
   constructor(private http:HttpClient) { }
-  regDetails:any=[
-    {username:"Pavan",password:"Pavan@123",usertype:"Agent"},
-    {username:"Nagaraju",password:"Nagaraju@123",usertype:"Admin"},
-    {username:"Singam",password:"Singam@123",usertype:"Agent"},
-  ];
   //for getting invoices
   getInvoices(){
     // return this.http.get("https://jsonplaceholder.typicode.com/users");
@@ -34,5 +29,22 @@ export class VssService {
   editInvoice(editedInv:any){
     return this.http.put(environment.apiBaseUrl + "invoices/"+editedInv.id,editedInv)
   }
+
+  //userDetails
+  loginvalidation():Observable<any>{
+    return  this.http.get(environment.apiBaseUrl + "users")
+  }
+login(deta:any):Observable<any>{
+  return this.loginvalidation().pipe(
+    map((users:any)=>{
+  const user=users.find((user:any)=>deta.userName===user.userName&&deta.password===user.password&&deta.userType===user.userType)
+    if(user){
+      return user
+    }else{
+    return {error:"invalid details"}
+    }
+    }))
+}
+
 
 }
