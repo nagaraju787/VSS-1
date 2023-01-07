@@ -11,8 +11,8 @@ import { VssService } from 'src/app/vss.service';
 export class RegistrationComponent implements OnInit {
   RegForm!: FormGroup;
   disabled: Boolean = true;
-  userType: any = ["Agent", "Admin"];
-  constructor(private fb: FormBuilder, private vss: VssService, router: Router) { }
+  userType:any=[{name:"",value:"Selet userType"},{name:"Admin",value:"Admin"},{name:"",value:"Agent"},];
+constructor(private fb: FormBuilder, private vss: VssService, router: Router) { }
 
   ngOnInit(): void {
     this.RegForm = this.fb.group({
