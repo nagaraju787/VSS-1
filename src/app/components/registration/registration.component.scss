@@ -65,7 +65,7 @@
 // }
 .ddd{
   background-image: linear-gradient(to top right, blue, green);
-  height:110vh;
+  height:100vh;
   margin: 0px;
   padding:250px;
 }
@@ -74,7 +74,7 @@
     border-radius: 10px;
     background: #fff;
     form{
-        padding: 60px;
+        padding: 40px;
     }
       h1 {
         text-align: center;
@@ -83,7 +83,7 @@
         margin-bottom: 40px;
     }
    .row {
-        min-height: 410px;
+        min-height: 400px;
         margin-bottom: 20px;
         .col-6 {
             .form-group {
@@ -102,12 +102,19 @@
             }
         }
      }
+     #user{
+        padding: 8px;
+        width:100%;
+        border-radius: 10px;
+        border-color: #bbb;
+        color: #101;
+     }
   }
 
   button {
     float: right;
     font-size: 20px;
-   // margin-top: -45px;
+    margin-top: -20px;
 }  
 
 

@@ -11,6 +11,7 @@ import { VssService } from 'src/app/vss.service';
 export class RegistrationComponent implements OnInit {
    RegForm!:FormGroup;
    disabled:Boolean= true;
+   userType:any=["Agent","Admin"];
   constructor(private fb:FormBuilder,private vss:VssService,router:Router) { }
    
   ngOnInit(): void {
@@ -18,11 +19,11 @@ export class RegistrationComponent implements OnInit {
       fname:['',[Validators.required,Validators.minLength(1)]],
       lname:['',[Validators.required,Validators.minLength(1)]],
       email:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
-      phno:['',[Validators.required,Validators.pattern("^[1-9]{10}$"),Validators.maxLength(10)]],
+      phno:['',[Validators.required,Validators.pattern("^[1-9]{10}$"),Validators.minLength(10)]],
       address:['',[Validators.required,Validators.minLength(20)]],
-      nationality: ['',[Validators.required,Validators.minLength(1)]],
       uname:['',[Validators.required,Validators.minLength(1)]],
       pswd: ['',[Validators.required,Validators.minLength(8)]],
+      userType:[''],
     })
   }
   getRegFormControl(key: string):any{
@@ -31,7 +32,7 @@ export class RegistrationComponent implements OnInit {
    save(){
       console.log(this.RegForm.value);
       this.disabled= false;
-      const {cpswd, ...data} = this.RegForm.value;
+      const {pswd, ...data} = this.RegForm.value;
        this.vss.saveUser(data).subscribe((res)=>{
          if(res) {
            return this.RegForm.reset();
