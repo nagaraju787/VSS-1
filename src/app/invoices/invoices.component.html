@@ -83,22 +83,22 @@
     </div>
     <div>
       <label for="">Id :</label>
-      <input type="text" class="form-control"[(ngModel)]="newInvoice.id" style="margin-left: 35px;">
+      <input type="text" class="form-control"[(ngModel)]="newInvoice.id" style="margin-left: 35px;" >
     </div>
     <div>
       <label for="">Name :</label>
-      <input type="text" class="form-control" [(ngModel)]="newInvoice.name">
+      <input type="text" class="form-control" [(ngModel)]="newInvoice.name" required  #name >
     </div>
     <div>
       <label for="">Email :</label>
-      <input type="email" class="form-control" [(ngModel)]="newInvoice.email">
+      <input type="email" class="form-control" [(ngModel)]="newInvoice.email" #email>
     </div>
     <div>
       <label for="">Phno :</label>
-      <input type="number" class="form-control" [(ngModel)]="newInvoice.phone">
+      <input type="number" class="form-control" [(ngModel)]="newInvoice.phone" required minlength="10" #phone>
     </div>
     <div class="btns">
-      <button class="btn btn-primary" (click)="addChanges()">{{btnText}}</button>
+      <button class="btn btn-primary" [disabled]="!(name.value && email.value && phone.value.length === 10)" (click)="addChanges()" >{{btnText}}</button>
       <button class="btn btn-danger" (click)="cancel()">Cancel</button>
     </div>
   </div>

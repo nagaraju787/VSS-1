@@ -31,16 +31,16 @@ export class RegistrationComponent implements OnInit {
    save(){
       console.log(this.RegForm.value);
       this.disabled= false;
-      const {cpswd, ...data} = this.RegForm.value;
-       this.vss.saveUser(data).subscribe((res)=>{
-         if(res) {
-           return this.RegForm.reset();
-         }
-         else{
-          return false;
-         }
+      const {pswd, ...data} = this.RegForm.value;
+       this.vss.saveUser(this.RegForm.value).subscribe()
+        //  if(res) {
+        //    return this.RegForm.reset();
+        //  }
+        //  else{
+        //   return false;
+        //  }
 
-          })
+         
      }
 
   }     
