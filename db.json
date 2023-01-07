@@ -1,16 +1,6 @@
 {
   "users": [
-    {
-      "fname": "pavan",
-      "lname": "bathula",
-      "email": "pavan@gmail.com",
-      "phno": 1345678977,
-      "address": "pangaguttahjklkjfghjk",
-      "nationality": "india",
-      "uname": "test123",
-      "pswd": "1234567u",
-      "id": 1
-    }
+    
   ],
   "invoices": [
     {
