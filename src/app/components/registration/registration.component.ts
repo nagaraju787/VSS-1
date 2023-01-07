@@ -21,9 +21,9 @@ export class RegistrationComponent implements OnInit {
       email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       phno: ['', [Validators.required, Validators.pattern("^[1-9]{10}$"), Validators.minLength(10)]],
       address: ['', [Validators.required, Validators.minLength(20)]],
-      uname: ['', [Validators.required, Validators.minLength(1)]],
-      pswd: ['', [Validators.required, Validators.minLength(8)]],
-      userType: [''],
+      userName: ['', [Validators.required, Validators.minLength(1)]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      userType: ['',[Validators.required]],
     })
   }
   getRegFormControl(key: string): any {
