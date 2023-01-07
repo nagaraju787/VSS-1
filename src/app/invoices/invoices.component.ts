@@ -89,13 +89,15 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   }
   addChanges() {
     this.showForm = false;
+    
     console.log(this.newInvoice);
     if (this.isEdit) {
-         this.vssService.editInvoice(this.newInvoice).subscribe(x=>console.log(x))
+         this.vssService.editInvoice(this.newInvoice).subscribe(x=>console.log(x));
     }
     else {
-      this.vssService.addInvoice(this.newInvoice).subscribe()
+      this.vssService.addInvoice(this.newInvoice).subscribe();
     }
+   // this.getInvoices()
   }
   editInvoice(invoice: any) {
     this.showForm = true;

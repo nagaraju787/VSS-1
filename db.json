@@ -1,19 +1,23 @@
 {
   "users": [
     {
-      "userName":"nagaraju",
-      "email":"nagaraju",
-      "password":"nagaraju",
-      "confirmpassword":"nagaraju",
-      "userType":"Agent"
+      "fname": "pavan",
+      "lname": "bathula",
+      "email": "pavan@gmail.com",
+      "phno": 1345678977,
+      "address": "pangaguttahjklkjfghjk",
+      "nationality": "india",
+      "uname": "test123",
+      "pswd": "1234567u",
+      "id": 1
     }
   ],
   "invoices": [
     {
+      "id": 1,
       "name": "pavan",
       "email": "pavan@gmail.com",
-      "phone": 3434343874892,
-      "id": 1
+      "phone": 3434343874
     },
     {
       "name": "nagaraju",
@@ -29,21 +33,15 @@
     },
     {
       "id": 4,
-      "email": "eefsdfds",
-      "phone": 9123654
+      "name": "pavan bathula",
+      "email": "pavankumarre@gmail.com",
+      "phone": 9123654343
     },
     {
-      "phone": 445565646,
-      "email": "madhu@gmail.com",
+      "id": 7,
       "name": "madhu",
-      "id": 7
-    },
-   
-    {
-      "id": 8,
-      "name": "klpoikjuhg",
-      "email": ",mnb",
-      "phone": 9876
+      "email": "madhu@gmail.com",
+      "phone": 4455656462
     },
     {
       "name": "pavan kumar",
@@ -58,20 +56,31 @@
       "id": 10
     },
     {
-      "id": 11
+      "id": 15,
+      "name": "pavan bathula",
+      "email": "pavan@gmail.com",
+      "phone": 123456734
     },
     {
-      "id": 12
+      "name": "pavan bathula",
+      "email": "pavankumarre@gmail.com",
+      "phone": 2345654321,
+      "id": 16
     },
     {
-      "id": 13
+      "id": 17,
+      "name": "ramu",
+      "email": "ramu@gmail.com",
+      "phone": 2345432
     },
     {
-      "email": ",hgfdsdfgh",
-      "id": 14
+      "id": 18,
+      "name": "ramu",
+      "email": "pavan@gmail.com",
+      "phone": 1224324535
     },
     {
-      "id": 15
+      "id": 19
     }
   ]
 }
