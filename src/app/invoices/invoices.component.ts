@@ -70,10 +70,10 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   conifirmDelete() {
     this.vssService.deleteInvoice(this.invoiceId).subscribe((res) => {
       console.log(res)
+      this.showDeleteform = false;
       // console.log(this.datasource.data.splice(1, this.invoiceId))
       this.getInvoices()
     });
-    this.showDeleteform = false;
   }
   addNewInvo() {
     this.title = "Add Invoice";
