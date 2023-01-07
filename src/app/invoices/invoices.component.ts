@@ -23,11 +23,9 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   newInvoice: any = {};
   isEdit: Boolean = false;
   title: any;
-  btnText:any;
-  invoiceId:any;
-  showDeleteform:any = false;
-  
-
+  btnText: any;
+  invoiceId: any;
+  showDeleteform: any = false;
 
   constructor(private vssService: VssService, private _liveAnnouncer: LiveAnnouncer) { }
 
@@ -65,39 +63,47 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   }
   //delete Invoice
   deleteInv(id: any) {
-      this.invoiceId = id;
-    this. showDeleteform = true;
+    this.invoiceId = id;
+    this.showDeleteform = true;
   }
   //dialogue delete 
-     conifirmDelete(){
-      this.vssService.deleteInvoice(this.invoiceId).subscribe((res) => {
-        console.log(res)
-       // console.log(this.datasource.data.splice(1, this.invoiceId))
-        this.getInvoices()
-      });
-      this. showDeleteform = false;
-     }
+  conifirmDelete() {
+    this.vssService.deleteInvoice(this.invoiceId).subscribe((res) => {
+      console.log(res)
+      // console.log(this.datasource.data.splice(1, this.invoiceId))
+      this.getInvoices()
+    });
+    this.showDeleteform = false;
+  }
   addNewInvo() {
     this.title = "Add Invoice";
     this.showForm = true;
     this.newInvoice = {};
     this.btnText = "Add";
-    
+
   }
   cancel() {
     this.showForm = false;
   }
   addChanges() {
-    this.showForm = false;
-    
+
     console.log(this.newInvoice);
     if (this.isEdit) {
-         this.vssService.editInvoice(this.newInvoice).subscribe(x=>console.log(x));
+      this.vssService.editInvoice(this.newInvoice).subscribe((res) => {
+        if (res) {
+          this.getInvoices();
+          this.showForm = false;
+        }
+      });
+    } else {
+      this.vssService.addInvoice(this.newInvoice).subscribe((res) => {
+        if (res) {
+          this.getInvoices();
+          this.showForm = false;
+        }
+      });
     }
-    else {
-      this.vssService.addInvoice(this.newInvoice).subscribe();
-    }
-   // this.getInvoices()
+    // this.getInvoices()
   }
   editInvoice(invoice: any) {
     this.showForm = true;
@@ -110,8 +116,8 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
     this.isEdit = true;
 
   }
-  cancelDelete(){
-     this. showDeleteform = false;
+  cancelDelete() {
+    this.showDeleteform = false;
   }
-  
+
 }
