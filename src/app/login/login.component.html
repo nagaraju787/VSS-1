@@ -18,9 +18,8 @@
                     placeholder="Password">
                 </div>
                 <div class="select mt-3">
-                    <select class="form-select form-select "  name="user" formControlName="userType">
-                        <option value="userType" selected disabled>Select User Type</option>
-                        <option value="{{user}}" *ngFor="let user of userType">{{user}}</option>
+                    <select class="form-select form-select "  name="user" formControlName="userType" >
+                        <option value="{{user.name}}" *ngFor="let user of userType">{{user.value}}</option>
                     </select>
                 </div>
                 <div class="text-error text-danger mt-3">{{error}}</div>

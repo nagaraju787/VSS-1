@@ -11,7 +11,7 @@ import { VssService } from '../vss.service';
 export class LoginComponent implements OnInit {
   LoginForm!:FormGroup;
   user:any;
-  userType:any=["Agent","Admin"];
+  userType:any=[{name:"",value:"Selet userType"},{name:"Admin",value:"Admin"},{name:"",value:"Agent"},];
   error:any;
   constructor(private router:Router,private service:VssService,private fb:FormBuilder) { }
   // RegDetails:any=[];
