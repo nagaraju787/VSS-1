@@ -268,9 +268,14 @@
                     <div class="form-group ">
                         <label for="userType" id="v1" class="col-sm-2 col-form-label">UserType*:</label><br>
                             <select id="user" formControlName="userType">
-                              <option value="userType" selected disabled>Select User Type</option>
-                              <option value="{{user}}" *ngFor="let user of userType">{{user}}</option>
+                              <option value="{{user.name}}" *ngFor="let user of userType">{{user.value}}</option>
                             </select>
+                            <ng-container
+                            *ngIf="(getRegFormControl('userType').touched || getRegFormControl('userType').dirty) && getRegFormControl('userType').invalid">
+                            <div class="error" *ngIf="getRegFormControl('userType')?.errors['required']">userType is
+                                required
+                            </div>
+                        </ng-container>
                      </div>
                      <div class="form-group ">
                         <label for="address" id="v1" class="col-sm-2 col-form-label">Address*:</label>
