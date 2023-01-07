@@ -41,7 +41,16 @@ export class RegistrationComponent implements OnInit {
           return false;
          }
 
-          })
+       this.vss.saveUser(this.RegForm.value).subscribe()
+        //  if(res) {
+        //    return this.RegForm.reset();
+        //  }
+        //  else{
+        //   return false;
+        //  }
+
+
+         
      }
 
   }     

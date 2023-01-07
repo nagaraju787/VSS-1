@@ -16,8 +16,10 @@ export class VssService {
     // return this.http.get("https://jsonplaceholder.typicode.com/users");
     return this.http.get(environment.apiBaseUrl + "invoices")
   }
-  saveUser(userData: any) {
-    return this.http.post(environment.apiBaseUrl + 'users', userData);
+  saveUser(user: any) {
+    console.log(user)
+    return this.http.post(environment.apiBaseUrl + 'users', user);
+    
   }
   //for deleting invoices
   deleteInvoice(id:any){
