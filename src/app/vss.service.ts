@@ -44,7 +44,7 @@ export class VssService {
         const user = users.find((user: any) => deta.userName === user.userName && deta.password === user.password && deta.userType === user.userType)
         if (user) {
           this.Username.next(deta.userName);
-          sessionStorage.setItem('userName', deta.userName)
+          sessionStorage.setItem('userName', deta.userName);
           return user
         } else {
           return { error: "invalid details" }
