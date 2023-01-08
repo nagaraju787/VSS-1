@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VssService } from 'src/app/vss.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vss:VssService) { }
 dashBoardMenu:any=[
   {name:"Home",route:"/dashBoard/home"},
   {name:"UserList",route:"/dashBoard/userList"},
@@ -15,6 +16,7 @@ dashBoardMenu:any=[
   {name:"ContactUs",route:"/dashBoard/contactus"}
 ];
   ngOnInit(): void {
+    this.vss.Username.next(sessionStorage.getItem('userName'))
   }
 
 }
