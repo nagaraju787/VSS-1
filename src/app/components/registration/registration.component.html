@@ -270,12 +270,6 @@
                             <select id="user" formControlName="userType">
                               <option value="{{user.name}}" *ngFor="let user of userType">{{user.value}}</option>
                             </select>
-                            <ng-container
-                            *ngIf="(getRegFormControl('userType').touched || getRegFormControl('userType').dirty) && getRegFormControl('userType').invalid">
-                            <div class="error" *ngIf="getRegFormControl('userType')?.errors['required']">userType is
-                                required
-                            </div>
-                        </ng-container>
                      </div>
                      <div class="form-group ">
                         <label for="address" id="v1" class="col-sm-2 col-form-label">Address*:</label>
@@ -305,7 +299,7 @@
 
     <div class="s1" *ngIf="!disabled">
         <img src="../assets/download.png">
-        <h2>Registaration is succesfully</h2>
+        <h2>Registaration is succesfully</h2><br><br>
         <p>please go to login page</p>
         <button class="s2" type="button"><a [routerLink]="['/login']">login</a></button>
     </div>
