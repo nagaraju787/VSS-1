@@ -23,8 +23,13 @@ export class HeaderComponent implements OnInit {
     }else{
       this.profilecondition=true;
     }
-  }
+}
   route(){
   this.router.navigate(['login'])
+  }
+  leave(event:any){
+    setTimeout(() => {
+    this.profilecondition=false;
+     },2000);
   }
 }
