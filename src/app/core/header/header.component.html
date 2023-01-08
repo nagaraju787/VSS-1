@@ -5,7 +5,7 @@
         VSS Project-1
     </h1>
     <mat-icon id="icon" (click)="profile()">account_circle</mat-icon>
-    <div [ngClass]="profilecondition ? 'profile':'display'" >
+    <div [ngClass]="profilecondition ? 'profile':'display'" (mouseleave)="leave($event)" >
         <button class="btn btn-white mt-0">{{userName}}</button>
         <button class="btn btn-white mt-3">View Profile</button>
         <button class="btn btn-white mt-3">Settings</button>
