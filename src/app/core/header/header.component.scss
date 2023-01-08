@@ -6,67 +6,67 @@
     padding: 0px;
     background-color: rgb(114, 101, 189);
     position: relative;
-    mat-icon{
-        position:absolute;
+
+    .dropdownmenu {
+        position: absolute;
         right: 50px;
-        top:30px;
-        transform:scale(2);
-        &:hover{
-          border:1px solid rgb(185, 177, 177);
-          border-radius:15px;
-          cursor: pointer;
+        top: 15px;
+        transform: scale(1);
+
+        .btn {
+            height: 60px;
+            width: 60px;
+            border-radius: 30px;
+
+            .icon-size {
+                font-size: 30px;
+            }
         }
-        &div{
-            margin-bottom: 10px;
-        }
+
     }
-     div {
-        margin: 0px;
-        padding: 0px;
-        img {
-            height: 80px;
-            width: 80px;
-           }
-        }
-        h1 {
-        margin-left: 30px;
-        font-size: 50px;
-        font-style: unset;
-       }
-  }
 
-    
+    &div {
+        margin-bottom: 10px;
+    }
+}
 
+div {
+    margin: 0px;
+    padding: 0px;
 
-// .demo{
+    img {
+        height: 80px;
+        width: 80px;
+    }
+}
 
-//     height: 100px;
-//     text-align: center;
-//     font-weight: bolder;
-//     .icon{
-//         float: left;
-//         font-size: large;
-//     }
-// }
-.profile{
+h1 {
+    margin-left: 30px;
+    font-size: 50px;
+    font-style: unset;
+}
+
+.profile {
     position: absolute;
-    top:80px;
-    right:30px;
+    top: 80px;
+    right: 30px;
     width: 200px;
-    height:200px;
+    height: 200px;
     background-color: #fff;
-    border-radius:10px;
+    border-radius: 10px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     text-align: center;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    button{
-       &:hover{
-        background-color:rgb(249, 246, 246);
-       }
+
+    button {
+        &:hover {
+            background-color: rgb(249, 246, 246);
+        }
     }
-    
+
 }
-.display{
-    display:none;
+
+.display {
+    display: none;
 }
