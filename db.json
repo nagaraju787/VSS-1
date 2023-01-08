@@ -1,6 +1,16 @@
 {
   "users": [
-    
+    {
+      "fname": "nagaraju ",
+      "lname": "ghantasala",
+      "email": "nagaraju2415@gmail.com",
+      "phno": 1212121212,
+      "address": "nagaraju nagaraju nagaraju",
+      "userName": "nagaraju123",
+      "password": "nagaraju",
+      "userType": "Admin",
+      "id": 1
+    }
   ],
   "invoices": [
     {
