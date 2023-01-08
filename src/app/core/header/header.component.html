@@ -3,8 +3,13 @@
     <h1 class="demo" class="border border-primary position-static  p-3 " class="text-danger p-2"
         style="--bs-bg-opacity: .5;">
         VSS Project-1
-        VSS PROJECT2
     </h1>
-    <mat-icon id="icon">account_circle</mat-icon>
+    <mat-icon id="icon" (click)="profile()">account_circle</mat-icon>
+    <div [ngClass]="profilecondition ? 'profile':'display'" >
+        <button class="btn btn-white mt-0">{{userName}}</button>
+        <button class="btn btn-white mt-3">View Profile</button>
+        <button class="btn btn-white mt-3">Settings</button>
+        <button (click)="route()" class="btn btn-white mt-3">Logout</button>
+    </div>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </div>
