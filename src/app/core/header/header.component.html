@@ -4,16 +4,18 @@
         style="--bs-bg-opacity: .5;">
         VSS Project-1
     </h1>
-    <div class="dropdown rounded-circle dropdownmenu bg-white" (click)="profile()">
-        <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-person-circle icon-size"></i>
-        </button>
-      </div> 
-    <div [ngClass]="profilecondition ? 'profile':'display'" (mouseleave)="leave($event)" >
-        <button class="btn btn-white mt-0">{{userName}}</button>
-        <button class="btn btn-white mt-3">View Profile</button>
-        <button class="btn btn-white mt-3">Settings</button>
-        <button (click)="LogOut()" class="btn btn-white mt-3">Logout</button>
-    </div>
+    <ng-container *ngIf="profilecondition">
+          <div class="dropdown rounded-circle dropdownmenu bg-white">
+            <button class="btn btn-white dropdown-toggle" [matMenuTriggerFor]="menu" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle icon-size"></i>
+            </button>
+          </div> 
+          <mat-menu #menu="matMenu" class="bg-white">
+              <button mat-menu-item class=" text-dark">{{userName}}</button>
+              <button mat-menu-item class=" text-dark"> View Profile</button>
+              <button mat-menu-item class=" text-dark">Settings </button>
+              <button mat-menu-item class=" text-dark" (click)="LogOut()">Logout</button>
+          </mat-menu>
+    </ng-container>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </div>
