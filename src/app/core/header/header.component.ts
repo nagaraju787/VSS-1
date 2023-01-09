@@ -32,6 +32,6 @@ LogOut(){
   leave(event:any){
     setTimeout(() => {
     this.profilecondition=false;
-     },2000);
+     },1000);
   }
 }
