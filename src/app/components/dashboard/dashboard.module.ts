@@ -6,7 +6,6 @@ import { DashBoardRoutingModule } from './dashboard-routing.module ';
 import { InvoicesModule } from 'src/app/invoices/invoices.module';
 import { HomeComponent } from '../home/home.component';
 import { ContactusComponent } from '../contactus/contactus.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -21,7 +20,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
      DashBoardRoutingModule,
     CoreModule,
     InvoicesModule,
-    NgbModule,
     
   ]
 })
