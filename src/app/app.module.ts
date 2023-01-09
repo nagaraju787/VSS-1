@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ForgetpasswordlinkComponent } from './components/forgetpasswordlink/forgetpasswordlink.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CoreModule } from './core/core.module';
 
 
 
@@ -36,7 +37,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatIconModule,
     HttpClientModule,
     NgbModule,
-  
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

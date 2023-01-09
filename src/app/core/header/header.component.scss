@@ -4,7 +4,7 @@
     background-color: rgb(190, 201, 201);
     padding: 20px 0px;
     padding: 0px;
-    background-color: rgb(114, 101, 189);
+    background-color:#2874f0;
     position: relative;
 
     .dropdownmenu {
@@ -24,7 +24,6 @@
         }
 
     }
-
     &div {
         margin-bottom: 10px;
     }
@@ -46,27 +45,27 @@ h1 {
     font-style: unset;
 }
 
-.profile {
-    position: absolute;
-    top: 80px;
-    right: 30px;
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+// .profile {
+//     position: absolute;
+//     top: 80px;
+//     right: 30px;
+//     width: 200px;
+//     height: 200px;
+//     background-color: #fff;
+//     border-radius: 10px;
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
-    button {
-        &:hover {
-            background-color: rgb(249, 246, 246);
-        }
-    }
+//     button {
+//         &:hover {
+//             background-color: rgb(249, 246, 246);
+//         }
+//     }
 
-}
+// }
 
-.display {
-    display: none;
-}
+// .display {
+//     display: none;
+// }

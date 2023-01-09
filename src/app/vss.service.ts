@@ -10,6 +10,7 @@ import { environment } from '../environments/environment'
 })
 export class VssService {
   passingback = new BehaviorSubject<any>(true)
+  userIcon = new BehaviorSubject<any>(false)
   Username = new BehaviorSubject<any>(null)
   constructor(private http: HttpClient) { }
   //for getting invoices
@@ -45,6 +46,7 @@ export class VssService {
         if (user) {
           this.Username.next(deta.userName);
           sessionStorage.setItem('userName', deta.userName);
+          this.userIcon.next(true);
           return user
         } else {
           return { error: "invalid details" }

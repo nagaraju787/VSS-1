@@ -13,8 +13,9 @@ import { VssService } from 'src/app/vss.service';
 export class HeaderComponent implements OnInit {
  userName:any=sessionStorage.getItem('userName');
   constructor(private vss:VssService , private router:Router) { }
- profilecondition:boolean=false;
+ profilecondition:boolean=true;
   ngOnInit(): void {
+    this.vss.userIcon.subscribe((value)=>{this.profilecondition=value})
     this.vss.Username.subscribe((user:any)=>{this.userName=user});
   }
   profile(){
@@ -27,11 +28,7 @@ export class HeaderComponent implements OnInit {
 LogOut(){
   console.log(sessionStorage.getItem('userName'))
   sessionStorage.removeItem('userName');
+  this.vss.userIcon.next(false)
   this.router.navigate(['login']);
-  }
-  leave(event:any){
-    setTimeout(() => {
-    this.profilecondition=false;
-     },1000);
   }
 }

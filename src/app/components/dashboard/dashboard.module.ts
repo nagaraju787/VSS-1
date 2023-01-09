@@ -21,7 +21,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
      DashBoardRoutingModule,
     CoreModule,
     InvoicesModule,
-    NgbModule
+    NgbModule,
+    
   ]
 })
 export class DashboardModule { }
