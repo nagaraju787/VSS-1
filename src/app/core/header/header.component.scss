@@ -1,12 +1,10 @@
 .main-container {
     display: flex;
     justify-content: flex-start;
-    background-color: rgb(190, 201, 201);
+    background-color: blueviolet;
     padding: 20px 0px;
-    padding: 0px;
-    background-color:#2874f0;
     position: relative;
-
+    
     .dropdownmenu {
         position: absolute;
         right: 50px;
@@ -22,39 +20,33 @@
                 font-size: 30px;
             }
         }
-
+        &div{
+            margin-bottom: 10px;
+        }
     }
-    &div {
-        margin-bottom: 10px;
-    }
-}
+     div {
+        margin: 0px;
+        padding: 0px;
+        img {
+            height: 80px;
+            width: 80px;
+           }
+        }
+        h1 {
+        margin-left: 30px;
+        font-size: 50px;
+        //font-style: unset;
+        color: azure;
+        font-weight: bold;
+       }
+  }
 
-div {
-    margin: 0px;
-    padding: 0px;
+    
 
-    img {
-        height: 80px;
-        width: 80px;
-    }
-}
 
-h1 {
-    margin-left: 30px;
-    font-size: 50px;
-    font-style: unset;
-}
+// .demo{
 
-// .profile {
-//     position: absolute;
-//     top: 80px;
-//     right: 30px;
-//     width: 200px;
-//     height: 200px;
-//     background-color: #fff;
-//     border-radius: 10px;
-//     display: flex;
-//     flex-direction: column;
+//     height: 100px;
 //     text-align: center;
 //     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
