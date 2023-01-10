@@ -2,9 +2,7 @@
     display: flex;
     justify-content: flex-start;
     background-color: blueviolet;
-    padding: 20px 0px;
     position: relative;
-    
     .dropdownmenu {
         position: absolute;
         right: 50px;
@@ -35,29 +33,21 @@
         h1 {
         margin-left: 30px;
         font-size: 50px;
-        //font-style: unset;
         color: azure;
         font-weight: bold;
        }
   }
+  .p1{
+    padding: 0px 30px;
+    &.bg-white{
+    width:400px;
+    height:300px;
+    }
+      
+  }
+  .text-dark{
+    padding:0px 60px;
+  }  
 
-    
 
 
-// .demo{
-
-//     height: 100px;
-//     text-align: center;
-//     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-
-//     button {
-//         &:hover {
-//             background-color: rgb(249, 246, 246);
-//         }
-//     }
-
-// }
-
-// .display {
-//     display: none;
-// }
