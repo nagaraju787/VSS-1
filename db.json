@@ -10,6 +10,17 @@
       "password": "nagaraju",
       "userType": "Admin",
       "id": 1
+    },
+    {
+      "fname": "prasanna",
+      "lname": "anangi",
+      "email": "anangiprasanna@gmail.com",
+      "phno": 8639614399,
+      "address": "pillutlgkjhggglyggfff",
+      "userName": "karishma",
+      "password": "12345678",
+      "userType": "Admin",
+      "id": 2
     }
   ],
   "invoices": [
