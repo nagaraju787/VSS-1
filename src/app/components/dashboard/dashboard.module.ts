@@ -6,6 +6,7 @@ import { DashBoardRoutingModule } from './dashboard-routing.module ';
 import { InvoicesModule } from 'src/app/invoices/invoices.module';
 import { HomeComponent } from '../home/home.component';
 import { ContactusComponent } from '../contactus/contactus.component';
+import { StocksModule } from 'src/app/stocks/stocks.module';
 
 
 
@@ -20,6 +21,7 @@ import { ContactusComponent } from '../contactus/contactus.component';
      DashBoardRoutingModule,
     CoreModule,
     InvoicesModule,
+    StocksModule
     
   ]
 })

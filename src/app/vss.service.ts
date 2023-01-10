@@ -53,6 +53,8 @@ export class VssService {
         }
       }))
   }
-
+  getStocks(): Observable<any> {
+    return this.http.get(environment.apiBaseUrl + "stocks")
+  }
 
 }
