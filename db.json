@@ -21,6 +21,39 @@
       "password": "12345678",
       "userType": "Admin",
       "id": 2
+    },
+    {
+      "fname": "prasanna",
+      "lname": "anangi",
+      "email": "anangiprasanna@gmail.com",
+      "phno": 8639614399,
+      "address": "aaaaaaaaaaaaaaaaaaaaaaa",
+      "userName": "prasanna",
+      "password": "11111111",
+      "userType": "Admin",
+      "id": 3
+    },
+    {
+      "fname": "prasanna",
+      "lname": "anangi",
+      "email": "anangiprasanna@gmail.com",
+      "phno": 8639614399,
+      "address": "dddddddddddddddddddd",
+      "userName": "prasanna",
+      "password": "2222222222",
+      "userType": "Admin",
+      "id": 4
+    },
+    {
+      "fname": "prasanna",
+      "lname": "anangi",
+      "email": "anangiprasanna@gmail.com",
+      "phno": 8639614399,
+      "address": "aaaaaaaaaaaaaaaaaaaaaaa",
+      "userName": "karishma",
+      "password": "11111111",
+      "userType": "Admin",
+      "id": 5
     }
   ],
   "invoices": [
