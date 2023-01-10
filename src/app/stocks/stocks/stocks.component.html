@@ -1,6 +1,6 @@
 <div class="main-container p-3">
     <mat-form-field color='block' class="mat-focused">
-        <input matInput placeholder="Filter" >
+        <input matInput placeholder="Filter" (keyup)="filter($event)" #input >
     </mat-form-field>  
     <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" matSort>
@@ -41,14 +41,12 @@
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr *matNoDataRow>
+                <td style="text-align: center;" [attr.colspan]="displayedColumns.length">
+                    No Records Found! <span style="font-weight: bold;">{{input.value}}</span>
+                </td>
+            </tr>
        </table>
-       <table>
-        <tr *ngIf="!dataSource.data.length">
-          <td style="text-align: center;" [attr.colspan]="displayedColumns.length">
-            No Records Found!
-          </td>
-        </tr>
-      </table>
     </div>
     <div class="matPaginator">
         <mat-paginator [length]="100" [hidden]="!dataSource.data.length || dataSource.data.length < 10 "  class="bg-secondary text-white mt-3" [pageSize]="10"

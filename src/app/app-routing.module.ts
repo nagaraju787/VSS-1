@@ -13,7 +13,8 @@ const routes: Routes = [
   {path:"forgetpasswordemailLink",component:ForgetpasswordlinkComponent},
   {path:"forgetpassword",pathMatch:"full",component:ForgetPasswordComponent},
   {path:"",pathMatch:"full",redirectTo:"login"},
-  { path: 'dashBoard', loadChildren: () => import('./components/dashboard/dashboard.module').then(m => m.DashboardModule),canActivateChild:[ChildAuthGuardGuard] }
+  { path: 'dashBoard', loadChildren: () => import('./components/dashboard/dashboard.module').then(m => m.DashboardModule), }
+//canActivateChild:[ChildAuthGuardGuard]
 ];
 
 @NgModule({
