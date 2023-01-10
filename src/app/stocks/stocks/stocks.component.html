@@ -42,11 +42,18 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
        </table>
+       <table>
+        <tr *ngIf="!dataSource.data.length">
+          <td style="text-align: center;" [attr.colspan]="displayedColumns.length">
+            No Records Found!
+          </td>
+        </tr>
+      </table>
     </div>
-  <div class="matPaginator">
-      <mat-paginator [length]="100" class="bg-secondary text-white mt-3" [pageSize]="10"
-           [pageSizeOptions]="[3, 5, 7, 10]" aria-label="Select page" showFirstLastButtons>
-      </mat-paginator>
-  </div>
+    <div class="matPaginator">
+        <mat-paginator [length]="100" [hidden]="!dataSource.data.length || dataSource.data.length < 10 "  class="bg-secondary text-white mt-3" [pageSize]="10"
+            [pageSizeOptions]="[3, 5, 7, 10]" aria-label="Select page" showFirstLastButtons>
+        </mat-paginator>
+    </div>
 </div>
  
