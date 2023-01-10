@@ -17,7 +17,8 @@ dashBoardMenu:any=[
   {name:"ContactUs",route:"/dashBoard/contactus"}
 ];
   ngOnInit(): void {
-    this.vss.Username.next(sessionStorage.getItem('userName'))
+    this.vss.userIcon.next(true);
+    this.vss.Username.next(sessionStorage.getItem('userName'));
   }
 
 }
