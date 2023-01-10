@@ -1,36 +1,30 @@
 table {
-    width: 100%;
-    background-color:#fff;
+ width: 100%;
+ background-color:#fff;
 }
-  
-    table,
-    th,
-    td {
-      color: black;
-      border-bottom: 1px solid #ddd;
-  
-    }
-  
-    tr:hover {
-      background-color: rgb(223, 222, 222);
-    }
-    th{
-        background-color: aquamarine;
-        font-size:15px;
-        color: #fff;
-        font-weight: 600;
-    }
-    .matPaginator{
-        display: flex;
-        justify-content: flex-end;
-        mat-paginator{
-            width:max-content;
-            &:active{
-              color:black
-            }
+table,th,td {
+    color: black;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {
+    background-color: rgb(223, 222, 222);
+}
+th{
+  background-color: aquamarine;
+  font-size:15px;
+  color: #fff;
+  font-weight: 600;
+}
+.matPaginator{
+    display: flex;
+    justify-content: flex-end;
+    mat-paginator{
+        width:max-content;
+         &:active{
+            color:black
         }
     }
-
+}
 .mat-form-field {
     font-size: 14px;
     width: 100%;
