@@ -3,7 +3,7 @@ import { MatTableDataSource, } from '@angular/material/table';
 import { VssService } from '../vss.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
-import { LiveAnnouncer } from '@angular/cdk/a11y';
+
 
 //import { DataSource } from '@angular/material';
 @Component({
@@ -25,9 +25,13 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   title: any;
   btnText: any;
   invoiceId: any;
+  filterValue:any;
   showDeleteform: any = false;
+  searchBar:Boolean = false;
+  paginatorShow:Boolean = true;
+  clearIcon: any;
 
-  constructor(private vssService: VssService, private _liveAnnouncer: LiveAnnouncer) { }
+  constructor(private vssService: VssService) { }
 
   ngOnInit(): void {
     this.getInvoices();
@@ -35,31 +39,34 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   }
   ngAfterViewInit() {
     this.datasource.paginator = this.paginator;
+      console.log(this.paginator.hasNextPage)
     this.datasource.sort = this.sort;
   }
   getInvoices() {
     this.vssService.getInvoices().subscribe((data: any) => {
       this.invoicesList = data;
       this.datasource.data = data;
-      console.log(this.datasource.data);
+      console.log( this.datasource.data.length);
       this.spinner = false;
+      if(data.length >= 1){
+        this.searchBar = true
+      };
+     
     })
+    if(this.datasource.data.length > 5){
+      this.paginatorShow = false;
+      //this.getInvoices();
+   }
   }
   applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.datasource.filter = filterValue.trim().toLowerCase();
+    this. filterValue = (event.target as HTMLInputElement).value;
+    this.datasource.filter = this.filterValue.trim().toLowerCase();
+   this. filterValue ? this.clearIcon = true : this.clearIcon = false; 
   }
-  //for sorting table
-  announceSortChange(sortState: any) {
-    // This example uses English messages. If your application supports
-    // multiple language, you would internationalize these strings.
-    // Furthermore, you can customize the message to add additional
-    // details about the values being sorted.
-    if (sortState.direction) {
-      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
-    } else {
-      this._liveAnnouncer.announce('Sorting cleared');
-    }
+  clearSearch(input:any){
+       input.value = "";
+       this.getInvoices();
+       this.clearIcon = false;
   }
   //delete Invoice
   deleteInv(id: any) {

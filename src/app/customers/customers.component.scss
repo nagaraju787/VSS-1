@@ -1,0 +1,65 @@
+.main {
+    background-color: rgb(221, 227, 227);
+    padding: 0px 20px 20px;
+    height: 100%;
+    width: 100%;
+
+    .topRow {
+        display: flex;
+        justify-content: space-between;
+
+        mat-form-field {
+            font-size: 14px;
+            width: 200px;
+            padding: 0px;
+        }
+
+        .addCustomer {
+            color: white;
+            background-color: green;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 22px 0px 0 0
+        }
+    }
+
+    .table {
+        z-index: 100;
+        border-radius: 2px;
+
+        mat-table {
+            background-color: white;
+
+            mat-header-cell {
+                font-size: 1em;
+                font-weight: bold;
+                background-color: rgb(16, 166, 131);
+                color: white;
+            }
+
+            mat-cell {
+                color: black;
+                text-align: center;
+            }
+
+            mat-row {
+                border-bottom: 1.5px solid rgb(218, 220, 220);
+                color: black;
+                border-collapse: collapse;
+            }
+
+        }
+    }
+}
+
+::ng-deep .matmenu {
+    background-color: white;
+
+    button {
+        color: black;
+    }
+}
+mat-paginator{
+    padding-top: -500px;
+}

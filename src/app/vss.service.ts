@@ -57,4 +57,10 @@ export class VssService {
     return this.http.get(environment.apiBaseUrl + "stocks")
   }
 
+//customers info
+getCustomers():Observable<any>{
+  return this.http.get(environment.apiBaseUrl + "customers")
+}
+
+
 }
