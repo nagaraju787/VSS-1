@@ -10,12 +10,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DigitsDirective } from '../directives/digits.directive';
+
 
 
 
 @NgModule({
   declarations: [
-    StocksComponent
+    StocksComponent,
+    DigitsDirective
   ],
   imports: [
     CommonModule,

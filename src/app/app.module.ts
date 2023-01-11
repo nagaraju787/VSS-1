@@ -16,6 +16,7 @@ import { CoreModule } from './core/core.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { CoreModule } from './core/core.module';
     LoginComponent,
     ForgetPasswordComponent,
     ForgetpasswordlinkComponent,
+  
    
 ],
   imports: [
