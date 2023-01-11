@@ -6,7 +6,7 @@
     .dropdownmenu {
         position: absolute;
         right: 50px;
-        top: 15px;
+        top: 10px;
         transform: scale(1);
 
         .btn {
@@ -18,9 +18,7 @@
                 font-size: 30px;
             }
         }
-        &div{
-            margin-bottom: 10px;
-        }
+        
     }
      div {
         margin: 0px;
@@ -37,14 +35,14 @@
         font-weight: bold;
        }
   }
-  .p1{
-    padding: 0px 30px;
-    &.bg-white{
-    width:400px;
-    height:300px;
-    }
+//   .p1{
+//     padding: 0px 30px;
+//     &.bg-white{
+//     width:400px;
+//     height:300px;
+//     }
       
-  }
+  //}
   .text-dark{
     padding:0px 60px;
   }  

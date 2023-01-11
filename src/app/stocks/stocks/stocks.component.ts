@@ -54,7 +54,9 @@ export class StocksComponent implements OnInit,AfterViewInit {
       console.log(data);
   })
   }
+  eventValue:any="";
  filter(event:any){
+      this.eventValue=event.target.value; 
       this.dataSource.filter=event.target.value;
    }
 
