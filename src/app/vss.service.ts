@@ -63,4 +63,13 @@ getCustomers():Observable<any>{
 }
 
 
+  addStockItem(stock: any) {
+    return this.http.post(environment.apiBaseUrl + 'stocks', stock);
+  }
+  editStockItem(editStock: any) {
+    return this.http.put(environment.apiBaseUrl + "stocks/" + editStock.id, editStock)
+  }
+  deleteStocks(id: any) {
+    return this.http.delete(environment.apiBaseUrl + "stocks/" + id)
+  }
 }
