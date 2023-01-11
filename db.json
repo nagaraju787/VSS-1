@@ -170,7 +170,7 @@
       "batchName":"solor123",
       "companyName":"solor",
       "quanity":5,
-      "id":1
+      "id":2
     },
     {
       "itemName":"roofs",
@@ -178,7 +178,7 @@
       "batchName":"Alfa123",
       "companyName":"Alfa",
       "quanity":3,
-      "id":1
+      "id":3
     },
     {
       "itemName":"cail",
@@ -186,7 +186,7 @@
       "batchName":"SML123",
       "companyName":"SML clean room",
       "quanity":2,
-      "id":1
+      "id":4
     },
     {
       "itemName":"tubes",
@@ -194,15 +194,15 @@
       "batchName":"HYD123",
       "companyName":"HyderbadTubes",
       "quanity":2,
-      "id":1
+      "id":5
     },
     {
       "itemName":"pannel",
       "discription":"coldroom",
       "batchName":"HE123",
       "companyName":"HEIPL",
-      "quanity":2,
-      "id":1
+      "quanity":6,
+      "id":6
     }
   ]
 }
