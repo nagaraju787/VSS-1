@@ -157,11 +157,43 @@
   "stocks": [
     {
       "id": 1,
-      "itemName": "cc",
-      "discription": "cc",
-      "batchName": "cc",
-      "companyName": "cc",
-      "quanity": "cc"
+      "itemName": "pannel",
+      "discription": "cold room",
+      "batchName": "heipl123",
+      "companyName": "heipl",
+      "quanity": "2"
+    },
+    {
+      "id": 2,
+      "itemName": "puff",
+      "discription": "clean room ",
+      "batchName": "12JJ",
+      "companyName": "SML clean room",
+      "quanity": "10"
+    },
+    {
+      "id": 3,
+      "itemName": "coil",
+      "discription": "plain sheets",
+      "batchName": "cail122",
+      "companyName": "CIL",
+      "quanity": "14"
+    },
+    {
+      "id": 4,
+      "itemName": "tubes",
+      "discription": "puff panels",
+      "batchName": "tubes123",
+      "companyName": "hydtubes",
+      "quanity": "14"
+    },
+    {
+      "id": 5,
+      "itemName": "cutter",
+      "discription": "cutting perpose",
+      "batchName": "c125",
+      "companyName": "cuttingpvtltd",
+      "quanity": "15"
     }
   ]
 }
