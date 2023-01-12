@@ -19,13 +19,14 @@ export class StocksComponent implements OnInit,AfterViewInit {
   addStockText="";
   editable:boolean=false;
   stockItemId:any;
-  showDeleteform:boolean=false
+  showDeleteform:boolean=false;
+  eventValue:any=null;
   constructor(private vssService:VssService,private fb: FormBuilder) { }
   stocksForm!: FormGroup;
   dataSource = new MatTableDataSource<any>([]);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
- 
+  clearIcon:boolean=false;
   ngOnInit(): void {
     this.vssService.getStocks().subscribe((data: any) => {
       this.dataSource.data = data;
@@ -54,10 +55,11 @@ export class StocksComponent implements OnInit,AfterViewInit {
       console.log(data);
   })
   }
-  eventValue:any="";
+  
  filter(event:any){
+      this.clearIcon=true;
       this.eventValue=event.target.value; 
-      this.dataSource.filter=event.target.value;
+      this.dataSource.filter=event.target.value; 
    }
 
  addStockItem(){
@@ -65,8 +67,7 @@ export class StocksComponent implements OnInit,AfterViewInit {
     this.vssService.editStockItem(this.stocksForm.value).subscribe(()=>{
         this.getStocks();
         this.dilogueBox=false;
-       
-      });
+        });
     }else{
       this.vssService.addStockItem(this.stocksForm.value).subscribe(()=>{
         this.getStocks();
@@ -87,18 +88,18 @@ cencel(){
   }
 
  editStock(stockitem:any){
-  console.log(stockitem);
-  this.dilogueBox=true;
-  this.stocksForm = this.fb.group({
-    id: [stockitem.id],
-    itemName: [stockitem.itemName, [Validators.required]],
-    discription: [stockitem.discription, [Validators.required]],
-    batchName: [stockitem.batchName, [Validators.required]],
-    companyName: [stockitem.companyName, [Validators.required]],
-    quanity: [stockitem.quanity, [Validators.required]],
-   })
-   this.isEdit=true;
-  } 
+      console.log(stockitem);
+      this.dilogueBox=true;
+      this.stocksForm = this.fb.group({
+        id: [stockitem.id],
+        itemName: [stockitem.itemName, [Validators.required]],
+        discription: [stockitem.discription, [Validators.required]],
+        batchName: [stockitem.batchName, [Validators.required]],
+        companyName: [stockitem.companyName, [Validators.required]],
+        quanity: [stockitem.quanity, [Validators.required]],
+      })
+      this.isEdit=true;
+   } 
   delete(stockitemid:any){
     this.stockItemId=stockitemid;
     this.showDeleteform=true;
@@ -109,4 +110,9 @@ cencel(){
       this.getStocks();
     });
   } 
+  clear(){
+    this.eventValue="";
+    this.dataSource.filter="";
+    this.clearIcon=false;
+  }
 }
