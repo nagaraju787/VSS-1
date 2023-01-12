@@ -65,7 +65,7 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   }
   clearSearch(input:any){
        input.value = "";
-       this.getInvoices();
+       this.datasource.filter="";
        this.clearIcon = false;
   }
   //delete Invoice

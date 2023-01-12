@@ -33,7 +33,7 @@ justify-content: space-between;
 
 mat-form-field {
   font-size: 14px;
-  width: 200px;
+  width: 300px;
   margin:5px 0 0 5px;
 }
 .clearIcon{
@@ -143,4 +143,7 @@ mat-spinner{
     
    }        
   }
+}
+[hidden]{
+  display: none;
 }

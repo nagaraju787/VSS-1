@@ -70,8 +70,8 @@
   </table>
 </div>
 
-<div [style.visibility]="paginatorShow? 'hidden':'visible'">
-  <mat-paginator [length]="100"
+<div>
+  <mat-paginator [hidden]="datasource.data.length<5"
     class="mat-paginator-outer-container mat-form-field-flex ng-tns-c76-5 bg-secondary text-white mt-3" [pageSize]="5"
     [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page" showFirstLastButtons>
   </mat-paginator>
