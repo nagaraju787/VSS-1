@@ -31,8 +31,11 @@ arry:any[]=[
   ngOnInit(): void {
    this.actr.params.subscribe(
       x=>{this.deta=x});
+      console.log(this.deta);
    this.dd=parseInt(this.deta.id);
-   this.user=this.arry.find(u=>u.id==this.dd)
+   console.log(this.dd);
+   this.user=this.arry.find(u=>u.id==this.dd);
+   console.log(this.user);
   }
   back(){
    this.vss.passingback.next("true")
