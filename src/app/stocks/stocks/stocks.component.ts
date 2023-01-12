@@ -90,6 +90,7 @@ cencel(){
  editStock(stockitem:any){
       console.log(stockitem);
       this.dilogueBox=true;
+      this.addStockText="Edit Stock Item";
       this.stocksForm = this.fb.group({
         id: [stockitem.id],
         itemName: [stockitem.itemName, [Validators.required]],
