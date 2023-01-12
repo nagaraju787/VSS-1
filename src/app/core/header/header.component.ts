@@ -18,16 +18,16 @@ export class HeaderComponent implements OnInit {
     this.vss.userIcon.subscribe((value)=>{this.profilecondition=value})
     this.vss.Username.subscribe((user:any)=>{this.userName=user});
   }
-  profile(){
-    if(this.profilecondition){
-    this.profilecondition=false;
-    }else{
-      this.profilecondition=true;
-    }
-}
+//   profile(){
+//     if(this.profilecondition){
+//     this.profilecondition=false;
+//     }else{
+//       this.profilecondition=true;
+//     }
+// }
 LogOut(){
   console.log(sessionStorage.getItem('userName'))
-  sessionStorage.removeItem('userName');
+sessionStorage.removeItem('userName')
   this.vss.userIcon.next(false)
   this.router.navigate(['login']);
   }
