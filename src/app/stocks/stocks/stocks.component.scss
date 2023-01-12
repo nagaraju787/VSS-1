@@ -10,10 +10,10 @@ tr:hover {
     background-color: rgb(223, 222, 222);
 }
 th{
-  background-color: aquamarine;
-  font-size:15px;
+  background-color: rgb(122, 240, 118);
+  font-size:17px;
   color: #fff;
-  font-weight: 600;
+  font-weight:500;
 }
 .matPaginator{
     display: flex;
@@ -41,6 +41,13 @@ th{
         cursor:not-allowed;
    } 
  } 
+}
+.position-relative{
+    .position-absolute{
+        top:10px;
+        right: 10px;
+        cursor: pointer;
+    }
 }
 .dilogueBox{
     display: flex;
