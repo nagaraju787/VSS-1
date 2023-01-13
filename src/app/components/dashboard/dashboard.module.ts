@@ -9,6 +9,7 @@ import { ContactusComponent } from '../contactus/contactus.component';
 import { StocksModule } from 'src/app/stocks/stocks.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomersModule } from 'src/app/customers/customers.module';
+import { PaymentsComponent } from '../payments/payments.component';
 
 
 
@@ -16,7 +17,8 @@ import { CustomersModule } from 'src/app/customers/customers.module';
   declarations: [
   DashboardComponent,
   HomeComponent,
-  ContactusComponent
+  ContactusComponent,
+  PaymentsComponent
   ],
   imports: [
     CommonModule,

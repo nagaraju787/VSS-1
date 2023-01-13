@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ForgetpasswordlinkComponent } from './components/forgetpasswordlink/forgetpasswordlink.component';
 import { CoreModule } from './core/core.module';
+import { PaymentsComponent } from './components/payments/payments.component';
 
 
 
@@ -24,6 +25,7 @@ import { CoreModule } from './core/core.module';
     LoginComponent,
     ForgetPasswordComponent,
     ForgetpasswordlinkComponent,
+    
   
    
 ],
