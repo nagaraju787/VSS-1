@@ -157,43 +157,84 @@
   "stocks": [
     {
       "id": 1,
-      "itemName": "pannel",
-      "discription": "cold room",
-      "batchName": "heipl123",
-      "companyName": "heipl",
-      "quanity": "2"
-    },
-    {
-      "id": 2,
-      "itemName": "puff",
-      "discription": "clean room ",
-      "batchName": "12JJ",
-      "companyName": "SML clean room",
+      "itemName": "T-shirts",
+      "discription": "Mens T-shirt",
+      "batchName": "A11",
+      "companyName": "T-Shirt Elephant",
       "quanity": "10"
     },
     {
+      "id": 2,
+      "itemName": "Neck T-Shirt",
+      "discription": "Girls T-Shirts",
+      "batchName": "B11",
+      "companyName": "T Shirt Express",
+      "quanity": "15"
+    },
+    {
       "id": 3,
-      "itemName": "coil",
-      "discription": "plain sheets",
-      "batchName": "cail122",
-      "companyName": "CIL",
+      "itemName": "Printed T-Shirts",
+      "discription": "Boys and Girls",
+      "batchName": "C11",
+      "companyName": "Kits T Shirt Express",
       "quanity": "14"
     },
     {
       "id": 4,
-      "itemName": "tubes",
-      "discription": "puff panels",
-      "batchName": "tubes123",
-      "companyName": "hydtubes",
-      "quanity": "14"
+      "itemName": " Bootcut Jeans",
+      "discription": "Only For Mens",
+      "batchName": "D11",
+      "companyName": " Wrangler",
+      "quanity": "18"
     },
     {
       "id": 5,
-      "itemName": "cutter",
-      "discription": "cutting perpose",
-      "batchName": "c125",
-      "companyName": "cuttingpvtltd",
-      "quanity": "15"
+      "itemName": "Jeggings Jeans",
+      "discription": "Only For Ledies",
+      "batchName": "E11",
+      "companyName": "Flying Machine",
+      "quanity": "12"
+    },
+    {
+      "id": 6,
+      "itemName": "Patch Work Jeans",
+      "discription": "Boys and Girls",
+      "batchName": "F11",
+      "companyName": " DIESEL",
+      "quanity": "11"
+    },
+    {
+      "id": 7,
+      "itemName": "Peter England Shirt",
+      "discription": "Only For Mens",
+      "batchName": "G11",
+      "companyName": "Neostreak",
+      "quanity": "18"
+    },
+    {
+      "id": 8,
+      "itemName": "Van Heusen Shirt",
+      "discription": "Only For Mens",
+      "batchName": "H11",
+      "companyName": " Nykaa Cotton pvt ltd",
+      "quanity": "8"
+    },
+    {
+      "id": 9,
+      "itemName": " Men's Regular Shorts",
+      "discription": "Only For Mens",
+      "batchName": "I11",
+      "companyName": " Club A9 Womens",
+      "quanity": "28"
+    },
+    {
+      "id":10,
+      "itemName": "Womens Regular Shorts",
+      "discription": "Boys and Girls",
+      "batchName": "J11",
+      "companyName": "FRAULEIN ",
+      "quanity": "20"
     }
+
   ]
 }
