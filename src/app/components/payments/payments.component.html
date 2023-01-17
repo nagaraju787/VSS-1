@@ -7,13 +7,19 @@
             <div class="col-6 bg-white">
                 <div class="d-flex justify-content-between">
                     <div>
-                        <p>Date:15/1/2023</p> 
-                        <p>Time:10:10:25</p>
+                        <p>Date:{{newDate|date:'dd-MM-yyyy'}}</p> 
+                        <p>Time:{{time$ | async | date: "hh:mm:ss"}}</p>
                     </div>
                     <div>
                         <p>Customer Name:Nagaraju</p> 
                         <p>Total Due Amount:10,000</p>
                     </div>
+                </div>
+                <div class="mt-5 amount">
+                    <div><h6> Due Amount:10000</h6></div>
+                    <div><h6>New Amount:1000</h6></div>
+                    <div class="new-amount"><h5>Total:11000</h5></div>
+                    <button class="btn btn-success">Pay</button>
                 </div>
             </div>
         </div>
