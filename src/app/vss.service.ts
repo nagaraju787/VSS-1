@@ -72,4 +72,10 @@ getCustomers():Observable<any>{
   deleteStocks(id: any) {
     return this.http.delete(environment.apiBaseUrl + "stocks/" + id)
   }
+
+  
+  getCustomerdetails():Observable<any>{
+    return this.http.get(environment.apiBaseUrl + "customerdetails")
+  }
+  
 }
