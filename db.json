@@ -54,15 +54,20 @@
       "password": "11111111",
       "userType": "Admin",
       "id": 5
+    },
+    {
+      "fname": "prasanna",
+      "lname": "anangi",
+      "email": "anangiprasanna@gmail.com",
+      "phno": 8639614399,
+      "address": "vvvvvvvvvvvvvvvvvvvvvv",
+      "userName": "prasanna",
+      "password": "prasanna",
+      "userType": "Admin",
+      "id": 6
     }
   ],
   "invoices": [
-    {
-      "name": "pavan bathula",
-      "email": "pavankumarre@gmail.com",
-      "phone": 7997807680,
-      "id": 1
-    },
     {
       "email": "pavankumarre@gmail.com",
       "name": "pavan bathula",
@@ -156,14 +161,6 @@
   ],
   "stocks": [
     {
-      "id": 1,
-      "itemName": "T-shirts",
-      "discription": "Mens T-shirt",
-      "batchName": "A11",
-      "companyName": "T-Shirt Elephant",
-      "quanity": "10"
-    },
-    {
       "id": 2,
       "itemName": "Neck T-Shirt",
       "discription": "Girls T-Shirts",
@@ -228,13 +225,46 @@
       "quanity": "28"
     },
     {
-      "id":10,
+      "id": 10,
       "itemName": "Womens Regular Shorts",
       "discription": "Boys and Girls",
       "batchName": "J11",
       "companyName": "FRAULEIN ",
       "quanity": "20"
     }
-
+  ],
+  "customerdetails": [
+    {
+      "id": 1,
+      "Totalamount": 5000,
+      "Payedamount": 2000,
+      "Dueamount": 3000,
+      "name": "prasanna",
+      "date": "01-13-2023"
+    },
+    {
+      "id": 1,
+      "Totalamount": 5000,
+      "Payedamount": 2000,
+      "Dueamount": 3000,
+      "name": "prasanna",
+      "date": "01-13-2023"
+    },
+    {
+      "id": 1,
+      "Totalamount": 5000,
+      "Payedamount": 2000,
+      "Dueamount": 3000,
+      "name": "prasanna",
+      "date": "01-13-2023"
+    },
+    {
+      "id": 1,
+      "Totalamount": 5000,
+      "Payedamount": 2000,
+      "Dueamount": 3000,
+      "name": "prasanna",
+      "date": "01-13-2023"
+    }
   ]
 }

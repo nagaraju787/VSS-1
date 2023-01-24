@@ -4,6 +4,7 @@ import { CustomersComponent } from 'src/app/customers/customers.component';
 import { InvoicesComponent } from 'src/app/invoices/invoices.component';
 import { StocksComponent } from 'src/app/stocks/stocks/stocks.component';
 import { ContactusComponent } from '../contactus/contactus.component';
+import { CustomerdetailsComponent } from '../customerdetails/customerdetails.component';
 import { HomeComponent } from '../home/home.component';
 import { PaymentsComponent } from '../payments/payments.component';
 import { DashboardComponent } from './dashboard.component';
@@ -16,7 +17,8 @@ children:[{ path: 'userList', loadChildren: () => import('../../userlist/userlis
           {path:"stocks",component:StocksComponent},
           {path:"customers" , component:CustomersComponent},
           {path:"contactus",component:ContactusComponent},
-          {path:"payments",component:PaymentsComponent}
+          {path:"payments",component:PaymentsComponent},
+          {path:"customerdetails",component:CustomerdetailsComponent},
 ]}
 
 ];

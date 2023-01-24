@@ -10,7 +10,8 @@ import { StocksModule } from 'src/app/stocks/stocks.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomersModule } from 'src/app/customers/customers.module';
 import { PaymentsComponent } from '../payments/payments.component';
-
+import { CustomerdetailsComponent } from '../customerdetails/customerdetails.component';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PaymentsComponent } from '../payments/payments.component';
   DashboardComponent,
   HomeComponent,
   ContactusComponent,
-  PaymentsComponent
+  PaymentsComponent,
+  CustomerdetailsComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { PaymentsComponent } from '../payments/payments.component';
     InvoicesModule,
     StocksModule,
     NgbModule,
-    CustomersModule
+    CustomersModule,
+    MatTableModule
   ]
 })
 export class DashboardModule { }
