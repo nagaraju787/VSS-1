@@ -18,6 +18,9 @@ dashBoardMenu:any=[
   {name:"ContactUs",route:"/dashBoard/contactus"},
   {name:"payments",route:"/dashBoard/payments"},
   {name:"Customerdetails",route:"/dashBoard/customerdetails"},
+  {name:"NgRx",route:"/dashBoard/counter"},
+  {name:"NgRx-Posts",route:"/dashBoard/posts"},
+
 ];
   ngOnInit(): void {
     this.vss.userIcon.next(true);

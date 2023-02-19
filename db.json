@@ -65,14 +65,25 @@
       "password": "prasanna",
       "userType": "Admin",
       "id": 6
+    },
+    {
+      "fname": "gurunath",
+      "lname": "tangawar",
+      "email": "apexgurut@gmail.com",
+      "phno": 3434343434,
+      "address": "at -ju uisdufjsiodfjiosdjfoi",
+      "userName": "gurunath",
+      "password": "gurunath",
+      "userType": "Admin",
+      "id": 7
     }
   ],
   "invoices": [
     {
-      "email": "pavankumarre@gmail.com",
+      "id": 2,
       "name": "pavan bathula",
-      "phone": 8247027928,
-      "id": 2
+      "email": "pavankumarre@gmail.com",
+      "phone": 8247027921
     },
     {
       "name": "pavan bathula",
@@ -85,12 +96,6 @@
       "email": "pavan@gmail.com",
       "phone": 1233213213,
       "id": 4
-    },
-    {
-      "name": "pavan bathula",
-      "email": "pavankumarre@gmail.com",
-      "phone": 1234567890,
-      "id": 5
     }
   ],
   "customers": [
