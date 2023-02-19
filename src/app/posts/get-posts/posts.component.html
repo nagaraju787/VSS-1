@@ -1,0 +1,29 @@
+<h1>posts</h1>
+<div>
+    <button class="btn btn-primary" (click)="addPost()">Add post</button>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-striped">
+             <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Discription</th>
+                    <th>actions</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr *ngFor="let post of posts$ | async">
+                     <td>{{post.id}}</td>
+                     <td>{{post.title}}</td>
+                     <td>{{post.description}}</td>
+                     <td><button class="btn btn-danger" (click)="editPost(post.id)">edit</button></td>
+                </tr>
+             </tbody>
+        </table>
+    </div>
+    <div class="col-md-6" *ngIf="addpost">
+        <app-add-posts [id]="id"></app-add-posts>
+    </div>
+</div>

@@ -12,6 +12,8 @@ import { CustomersModule } from 'src/app/customers/customers.module';
 import { PaymentsComponent } from '../payments/payments.component';
 import { CustomerdetailsComponent } from '../customerdetails/customerdetails.component';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { CounterModule } from 'src/app/counter/counter.module';
+import { PostsModule } from 'src/app/posts/posts.module';
 
 
 @NgModule({
@@ -30,7 +32,10 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
     StocksModule,
     NgbModule,
     CustomersModule,
-    MatTableModule
+    MatTableModule,
+    CounterModule,
+    PostsModule,
+    
   ]
 })
 export class DashboardModule { }

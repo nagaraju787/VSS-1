@@ -1,0 +1,18 @@
+<div class="row m-4">
+    <div class="col-md-12">
+        <form action="" [formGroup]="postForm">
+            <div class="mb-3">
+                <label for="">Title:</label>
+                <input type="text" class="form-control" formControlName="title">
+                <div class="text-danger">{{titleValidation()}}</div>
+            </div>
+            <div class="mb-3">
+                <label for="">Discription:</label>
+                <input type="text" class="form-control" formControlName="description">
+                <div class="text-danger">{{descriptionValidation()}}</div>
+            </div>
+              <button *ngIf="button"  (click)="addPost()" class="btn btn-info" [disabled]="postForm.invalid">addPost</button>
+              <button *ngIf="!button"(click)="update()" class="btn btn-info" [disabled]="postForm.invalid">Update</button>
+        </form>
+    </div>
+</div>

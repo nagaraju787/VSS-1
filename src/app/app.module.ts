@@ -13,6 +13,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ForgetpasswordlinkComponent } from './components/forgetpasswordlink/forgetpasswordlink.component';
 import { CoreModule } from './core/core.module';
+import { CounterModule } from './counter/counter.module';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
+import { PostsModule } from './posts/posts.module';
 
 
 
@@ -24,7 +29,7 @@ import { CoreModule } from './core/core.module';
     LoginComponent,
     ForgetPasswordComponent,
     ForgetpasswordlinkComponent,
-  
+    
    
 ],
   imports: [
@@ -37,7 +42,13 @@ import { CoreModule } from './core/core.module';
     FormsModule,
     MatIconModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    CounterModule,
+    PostsModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      logOnly: environment.production,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
