@@ -1,0 +1,98 @@
+<div class="main">
+    <div class="header">INVOICE GENERATOR</div>
+</div>
+<form [formGroup]="invoiceForm">
+    <div class="inv_details">
+        <div class="row">
+            <div class="col-9 details cust_details">
+                <h6>Customer Details</h6>
+                <div class="form-group">
+                    <div class="first-row" style="display: flex;justify-content: space-between;">
+                        <div class="input" style="width:60%">
+                            <label for="Name">Name</label>
+                            <select id="Name" placeholder="Pick a customer..." class="form-control"
+                                (click)='optionSelect($event)' formControlName="name">
+                                <option value="">Select a customer...</option>
+                                <option value={{customer.CustomerId}} *ngFor="let customer of customers">
+                                    {{customer.FirstName + " " +
+                                    customer.LastName}}</option>
+                            </select>
+                        </div>
+                        <div class="input" style="width:35%">
+                            <label for="Name">Email ID</label>
+                            <input type="email" class="form-control" readonly formControlName="email">
+                        </div>
+                    </div>
+                    <div class="second-row" style="display: flex;justify-content: space-between;">
+                        <div class="input" style="width:60%">
+                            <label for="Name">Address</label>
+                            <textarea type="text-area" class="form-control" formControlName="address"
+                                readonly></textarea>
+                        </div>
+                        <div class="input" style="width:35%">
+                            <label for="Name">Contact No</label>
+                            <input type="number" class="form-control" formControlName="contact" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2  cust_details">
+                <button class="btn" style="width:100%" (click)="generatePDF('download')">Download Invoice</button>
+                <button class="btn" style="width:100%;margin:7px 0" (click)="generatePDF('print')">Print Invoice</button>
+                <button class="btn" style="width:100%" (click)="generatePDF()">View Invoice</button>
+            </div>
+        </div>
+    </div>
+    <div class="inv_details">
+        <div class="row">
+            <div class="col-9 details cust_details">
+                <div style="display: flex; justify-content: space-between;">
+                    <h6>Order Details</h6>
+                    <mat-icon (click)="getNewProduct()" style="cursor:pointer">add_circle</mat-icon>
+                </div>
+                <div class="form-array">
+                    <table>
+                        <thead>
+                            <th>Product</th>
+                            <th>Unit Price</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                        </thead>
+                        <tbody>
+                            <!-- <tr formArrayName="products"> -->
+                            <!-- <div [formGroupName]=i> -->
+                            <!-- <td><input type="text" class="form-control" formControlName="Product"></td> -->
+                            <!-- <select id="Name" placeholder="Select your product..." class="form-control"
+                                    (click)='selectProduct($event)' formControlName="Product">
+                                    <option value="">Select a product...</option>
+                                    <option value={{stock.id}} *ngFor="let stock of stocks">
+                                        {{stock.itemName}}</option>
+                                </select>
+                                <td><input type="number" class="form-control" formControlName="unitPrice" readonly></td>
+                                <td><input type="number" class="form-control" formControlName="quantity"></td>
+                                <td><input type="number" class="form-control" formControlName="amount" readonly></td> -->
+                            <!-- </div> -->
+                            <!-- </tr> -->
+                            <tr formArrayName="products" *ngFor="let product of products1.controls; let i=index">
+                                <ng-container [formGroupName]=i>
+                                    <select id="Name" placeholder="Select your product..." class="form-control"
+                                        (click)='selectProduct($event,i)' formControlName="product">
+                                        <option value="">Select a product...</option>
+                                        <option value={{stock.id}} *ngFor="let stock of stocks">
+                                            {{stock.itemName}}</option>
+                                    </select>
+                                    <td><input type="number" class="form-control" formControlName="unitPrice" readonly>
+                                    </td>
+                                    <td><input type="number" class="form-control" formControlName="quantity"></td>
+                                    <td><input type="number" class="form-control" formControlName="amount" readonly>
+                                    </td>
+                                </ng-container>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- <div class="col-2 details cust_details"></div> -->
+        </div>
+    </div>
+</form>

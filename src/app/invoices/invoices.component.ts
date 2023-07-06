@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatTableDataSource, } from '@angular/material/table';
 import { VssService } from '../vss.service';
@@ -31,7 +32,7 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
   paginatorShow:Boolean = true;
   clearIcon: any;
 
-  constructor(private vssService: VssService) { }
+  constructor(private vssService: VssService, private router:Router) { }
 
   ngOnInit(): void {
     this.getInvoices();
@@ -83,8 +84,9 @@ export class InvoicesComponent implements OnInit, AfterViewInit {
     });
   }
   addNewInvo() {
+      this.router.navigate(['/invoice_generator']);
     this.title = "Add Invoice";
-    this.showForm = true;
+    //this.showForm = true;
     this.newInvoice = {};
     this.btnText = "Add";
 

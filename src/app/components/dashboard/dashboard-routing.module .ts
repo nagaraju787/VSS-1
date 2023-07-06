@@ -1,3 +1,4 @@
+import { InvoiceGeneratorComponent } from './../../invoices/invoice-generator/invoice-generator.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CounterComponent } from 'src/app/counter/counter/counter.component';
@@ -13,22 +14,29 @@ import { PaymentsComponent } from '../payments/payments.component';
 import { DashboardComponent } from './dashboard.component';
 
 
-const routes: Routes = [{ path: '', component: DashboardComponent,
-children:[{ path: 'userList', loadChildren: () => import('../../userlist/userlist.module').then(m => m.UserlistModule) },
-          {path:"invoices",component:InvoicesComponent},
-          {path:"home",component:HomeComponent},
-          {path:"stocks",component:StocksComponent},
-          {path:"customers" , component:CustomersComponent},
-          {path:"contactus",component:ContactusComponent},
-          {path:"payments",component:PaymentsComponent},
-          {path:"customerdetails",component:CustomerdetailsComponent},
-          {path:"counter",component:CounterComponent},
-          {path:"posts",component:PostsComponent,
-              children:[
-                {path:"addpost",component:AddPostsComponent}
-              ]
-          }
-]}
+const routes: Routes = [{
+  path: '', component: DashboardComponent,
+  children: [{ path: 'userList', loadChildren: () => import('../../userlist/userlist.module').then(m => m.UserlistModule) },
+  {
+    path: "invoices", component: InvoicesComponent,
+    children: [{ path: "invoice_generator", component: InvoiceGeneratorComponent },
+    ]
+  },
+  { path: "home", component: HomeComponent },
+  { path: "stocks", component: StocksComponent },
+  { path: "customers", component: CustomersComponent },
+  { path: "contactus", component: ContactusComponent },
+  { path: "payments", component: PaymentsComponent },
+  { path: "customerdetails", component: CustomerdetailsComponent },
+  { path: "counter", component: CounterComponent },
+  {
+    path: "posts", component: PostsComponent,
+    children: [
+      { path: "addpost", component: AddPostsComponent }
+    ]
+  }
+  ]
+}
 
 ];
 

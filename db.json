@@ -166,76 +166,31 @@
   ],
   "stocks": [
     {
+      "id": 1,
+      "itemName": "fhfg",
+      "discription": "hf",
+      "batchName": "fgjfg",
+      "companyName": "gjf",
+      "unitPrice": 44,
+      "quantity": 34
+    },
+    {
       "id": 2,
-      "itemName": "Neck T-Shirt",
-      "discription": "Girls T-Shirts",
-      "batchName": "B11",
-      "companyName": "T Shirt Express",
-      "quanity": "15"
+      "itemName": "sugar",
+      "discription": "sdfe",
+      "batchName": "dd",
+      "companyName": "tata",
+      "unitPrice": 30,
+      "quantity": 40
     },
     {
       "id": 3,
-      "itemName": "Printed T-Shirts",
-      "discription": "Boys and Girls",
-      "batchName": "C11",
-      "companyName": "Kits T Shirt Express",
-      "quanity": "14"
-    },
-    {
-      "id": 4,
-      "itemName": " Bootcut Jeans",
-      "discription": "Only For Mens",
-      "batchName": "D11",
-      "companyName": " Wrangler",
-      "quanity": "18"
-    },
-    {
-      "id": 5,
-      "itemName": "Jeggings Jeans",
-      "discription": "Only For Ledies",
-      "batchName": "E11",
-      "companyName": "Flying Machine",
-      "quanity": "12"
-    },
-    {
-      "id": 6,
-      "itemName": "Patch Work Jeans",
-      "discription": "Boys and Girls",
-      "batchName": "F11",
-      "companyName": " DIESEL",
-      "quanity": "11"
-    },
-    {
-      "id": 7,
-      "itemName": "Peter England Shirt",
-      "discription": "Only For Mens",
-      "batchName": "G11",
-      "companyName": "Neostreak",
-      "quanity": "18"
-    },
-    {
-      "id": 8,
-      "itemName": "Van Heusen Shirt",
-      "discription": "Only For Mens",
-      "batchName": "H11",
-      "companyName": " Nykaa Cotton pvt ltd",
-      "quanity": "8"
-    },
-    {
-      "id": 9,
-      "itemName": " Men's Regular Shorts",
-      "discription": "Only For Mens",
-      "batchName": "I11",
-      "companyName": " Club A9 Womens",
-      "quanity": "28"
-    },
-    {
-      "id": 10,
-      "itemName": "Womens Regular Shorts",
-      "discription": "Boys and Girls",
-      "batchName": "J11",
-      "companyName": "FRAULEIN ",
-      "quanity": "20"
+      "itemName": "rice",
+      "discription": "kurnool",
+      "batchName": "24FE6",
+      "companyName": "TATA",
+      "unitPrice": 40,
+      "quanity": 50
     }
   ],
   "customerdetails": [

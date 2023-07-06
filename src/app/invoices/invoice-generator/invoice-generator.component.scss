@@ -1,0 +1,52 @@
+.main{
+    margin:4px;
+    .header{
+        color:white;
+        background-color: grey;
+        padding:3px 0 0 10px;
+        height:30px
+    }
+}
+.inv_details{
+    .row{
+        margin:0px;
+        .details{
+            height:auto;
+            border:1px solid #494646;
+            margin: 0px 30px 3px 10px;
+            padding: 15px
+    
+        }
+        .cust_details{
+            .btn{
+                margin:7px 0;
+                background:grey;
+                color:white;
+                border:none;
+                border-radius: 5px;
+            }
+        }
+    }
+        
+}
+.form-array{
+    table{
+        width:100%;
+        thead{
+           padding:5px 0;
+            border-top:0.5px solid grey;
+            border-bottom:1.5px solid grey;
+            th{
+                padding:5px 0;
+            }
+            
+        }
+        tbody{
+            tr{
+                padding:10px 0;
+                margin:10px 0;
+               // border-top:0.5px solid grey;
+            }
+        }
+    }
+}

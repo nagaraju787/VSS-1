@@ -12,7 +12,7 @@ import { VssService } from 'src/app/vss.service';
   styleUrls: ['./stocks.component.scss']
 })
 export class StocksComponent implements OnInit,AfterViewInit {
-  displayedColumns: string[] = ["id", "itemName", "discription", "batchName", "companyName","quanity","actions"];
+  displayedColumns: string[] = ["id", "itemName", "discription", "batchName", "companyName","unitPrice", "quanity","actions"];
   stocksArray:any;
   dilogueBox:boolean=false;
   isEdit:boolean=false;
@@ -39,6 +39,7 @@ export class StocksComponent implements OnInit,AfterViewInit {
       discription: ['', [Validators.required]],
       batchName: ['', [Validators.required]],
       companyName: ['', [Validators.required]],
+      unitPrice: ['',[Validators.required]],
       quanity: ['', [Validators.required]],
      })
   }

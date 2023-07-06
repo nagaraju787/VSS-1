@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InvoicesComponent } from './invoices.component';
@@ -9,10 +10,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator'; 
 import {MatSortModule} from '@angular/material/sort';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InvoiceGeneratorComponent } from './invoice-generator/invoice-generator.component';
 @NgModule({
   declarations: [
     InvoicesComponent,
+    InvoiceGeneratorComponent,
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,10 @@ import { FormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatSortModule,
     MatProgressSpinnerModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    ReactiveFormsModule
   ]
+
 })
 export class InvoicesModule { }
